@@ -1,0 +1,13 @@
+schema_version: 1
+# Arbitrary units and staleness limits only for software fixtures.
+sensors:
+  - {name: ground_voltage_a, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 0.1, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 0.3, enabled: true, group: fast}
+  - {name: ground_voltage_b, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 0.1, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 0.3, enabled: true, group: fast}
+  - {name: leakage_current, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 1.0, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 3, enabled: true, group: fast}
+  - {name: limiter_temp_a, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 60.0, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 120, enabled: true, group: slow_context}
+  - {name: limiter_temp_b, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 60.0, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 120, enabled: true, group: slow_context}
+  - {name: limiter_temp_c, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 60.0, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 120, enabled: true, group: slow_context}
+  - {name: humidity, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 30.0, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 90, enabled: true, group: slow_context}
+  - {name: ambient_temp, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 30.0, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 90, enabled: true, group: slow_context}
+  - {name: input_voltage, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 1.0, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 3, enabled: true, group: fast}
+  - {name: lightning_sensor, unit: synthetic_unit, expected_min: null, expected_max: null, nominal_sampling_period: 0.1, threshold: null, missing_value_policy: limited_forward_fill, max_staleness: 0.3, enabled: true, group: fast}

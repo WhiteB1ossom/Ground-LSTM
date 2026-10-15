@@ -1,0 +1,9 @@
+schema_version: 1
+purpose: SOFTWARE_PIPELINE_TEST_ONLY
+mode: advisory
+buffer:
+  sequence_length: 16
+  sampling_period_seconds: 0.1
+  stride: 4
+  pre_event_seconds: 5
+hardware_actuation_enabled: false

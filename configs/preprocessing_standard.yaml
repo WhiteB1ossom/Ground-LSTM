@@ -1,0 +1,20 @@
+schema_version: 1
+extends: preprocessing.yaml
+sensors_config: sensors_standard.yaml
+input:
+  directory: ../data/raw/standard
+  patterns: ["*.csv", "*.parquet"]
+  source: monitoring
+  acquisition_kind: unknown # set field_measurement or lab_experiment after confirming provenance
+pipeline:
+  alignment_period_seconds: 0.1
+  include_age_features: true
+  windows:
+    sequence_length: 64 # 6.4 s initial fast-signal context; slow sensors are context
+    stride: 10 # evaluate once per second; still retains 100 ms input detail
+  split:
+    purge_gap_seconds: 6.4
+# This profile can inspect physical-unit data now. Dataset preparation still
+# requires explicit staleness, acquisition provenance and label mapping.
+# The 64-step window is an initial fast-context design, not a validated optimum.
+# Existing arbitrary-unit synthetic fixtures must use preprocessing_demo.yaml.

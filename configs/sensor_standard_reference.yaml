@@ -1,0 +1,29 @@
+schema_version: 1
+status: source_table_transcribed_pending_semantic_confirmation
+source:
+  file: ../그라운드_회차별 오픈랩 진행 계획_ver a_260909.pdf
+  page: 6
+  heading: 입력되는 물리량 데이터 기반 LSTM 시계열 모델 적용 데이터 셋
+  user_designated_standard: true
+  same_as_user_ppt: pending_confirmation
+  contains_measured_timeseries: false
+  contains_ground_truth_labels: false
+sensor_references:
+  ground_voltage_a: {range_text: "0~50V AC", threshold_text: "Threshold 1 = 2", threshold_value: 2, threshold_unit_context: V_AC, comparison_operator: null, period_seconds: 0.1, reported_bytes: 5}
+  ground_voltage_b: {range_text: "0~50V AC", threshold_text: "Threshold 1 = 2", threshold_value: 2, threshold_unit_context: V_AC, comparison_operator: null, period_seconds: 0.1, reported_bytes: 5}
+  leakage_current: {range_text: "0.001~1A", threshold_text: "Threshold 2 = 1mA", threshold_value_A: 0.001, comparison_operator: null, period_seconds: 1, reported_bytes: 5}
+  limiter_temp_a: {range_text: "25~150℃", threshold_text: "Threshold 5 = 25℃", threshold_value_degC: 25, reference: null, comparison_operator: null, period_seconds: 60, reported_bytes: 5}
+  limiter_temp_b: {range_text: "25~150℃", threshold_text: "Threshold 5 = 25℃", threshold_value_degC: 25, reference: null, comparison_operator: null, period_seconds: 60, reported_bytes: 5}
+  limiter_temp_c: {range_text: "25~150℃", threshold_text: "Threshold 5 = 25℃", threshold_value_degC: 25, reference: null, comparison_operator: null, period_seconds: 60, reported_bytes: 5}
+  humidity: {range_text: "20~90%", threshold_text: "Threshold 4 = 60%", threshold_value_percent_RH: 60, comparison_operator: null, period_seconds: 3600, reported_bytes: 5}
+  ambient_temp: {range_text: "-20 ~ 80 ℃", threshold_text: 비교값, threshold_value: null, period_seconds: 3600, reported_bytes: 5}
+  input_voltage: {range_text: "0~1500", threshold_text: 사용전압 비교(참고용), threshold_value: null, rated_voltage: null, period_seconds: 1, reported_bytes: 5}
+  lightning_sensor: {range_text: H/L, threshold_text: "H(1), L(0) 정보", encoding: {H: 1, L: 0}, threshold_value: null, period_seconds: 0.1, reported_bytes: 5}
+notes:
+  - Threshold numbers are preserved; they do not define comparison operators or ground_truth.
+  - Temperature threshold 25 degC needs clarification as absolute temperature or a rise/difference and its reference.
+  - Humidity and ambient temperature periods are 60 minutes, not 60 seconds or demo 30 seconds.
+  - 5 bytes is a source table field, not a definition of float encoding, memory payload or communication framing.
+  - Input voltage unit is inferred from the AC voltage sensor name; the range cell does not print a unit.
+  - V_AC here does not resolve RMS versus peak or the exact voltage reference.
+  - The table alone cannot choose sequence duration, staleness or supervised labels.

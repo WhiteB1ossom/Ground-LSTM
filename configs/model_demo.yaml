@@ -1,0 +1,33 @@
+schema_version: 1
+seed: 42
+labeling:
+  mode: binary
+  ground_truth_mapping: {normal: 0, risk: 1}
+  unlabeled_action: stop_training
+  multiclass_semantics_confirmed: false
+model:
+  type: lstm
+  hidden_units: 16
+  num_layers: 1
+  bidirectional: false
+  dropout: 0.0
+  sequence_length: 16
+training:
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 50
+  early_stopping_patience: 8
+  early_stopping_min_delta: 0.0001
+  lr_schedule: {enabled: true, factor: 0.5, patience: 3, min_learning_rate: 0.00001}
+  class_weight: balanced
+  deterministic: true
+  allow_synthetic_demo: true
+baseline:
+  logistic_max_iter: 1000
+  threshold_rules: []
+evaluation:
+  threshold_search: validation_scores
+  validation_threshold_candidates: [0.3, 0.4, 0.5, 0.6, 0.7]
+  threshold_objective: recall_then_f1
+  minimum_recall: 0.9
+  latency_repetitions: 10

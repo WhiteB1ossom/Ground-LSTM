@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightning-risk-pipeline"
+version = "0.1.0"
+description = "Causal sensor data pipeline for future embedded lightning risk inference"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2,<4", "PyYAML>=6,<7", "pyarrow>=19", "tzdata>=2025.1", "scikit-learn>=1.6,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+ml = ["tensorflow>=2.16,<3; python_version < '3.14'", "matplotlib>=3.8,<4", "ai-edge-litert>=2.3,<3; python_version < '3.14'"]
+
+[tool.setuptools.packages.find]
+include = ["src*", "scripts*"]
+
+[tool.setuptools.package-data]
+"src.realtime" = ["demo.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+

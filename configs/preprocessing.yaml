@@ -1,0 +1,59 @@
+schema_version: 1
+sensors_config: sensors.yaml
+input:
+  directory: ../data/raw
+  patterns: ["*.csv", "*.parquet"]
+  # Each input belongs to one acquisition source. Surge files need their own
+  # preprocessing/sensor config, not conversion to the monitoring rate.
+  source: monitoring
+  acquisition_kind: unknown # field_measurement / lab_experiment / synthetic
+timestamp:
+  naive_policy: reject  # reject or localize; never silently assume UTC
+  naive_timezone: null  # e.g. Asia/Seoul after company confirmation
+  output_timezone: UTC
+quality:
+  sampling_relative_tolerance: 0.2  # software diagnostic setting, not physical limit
+  flatline_seconds: null  # disabled until an appropriate duration is configured
+  healthy_sensor_status: ["OK"]
+  healthy_communication_status: ["OK"]
+report:
+  directory: ../artifacts/reports
+future_pipeline:
+  causal: true
+  alignment_period_seconds: null
+  stale_action: missing_indicator
+  features: [current_value]
+  scaler: standard
+  split: event_or_chronological
+  purge_gap_seconds: null
+  sequence_length: null
+  stride: null
+  pre_event_seconds: null
+  post_event_seconds: null
+pipeline:
+  segment_policy: acquisition
+  alignment_period_seconds: null
+  stale_action: missing_indicator # or drop_window
+  features: [current_value]
+  include_missing_indicators: true
+  include_age_features: false
+  rolling_window_steps: null
+  ground_voltage_difference: false # requires same confirmed unit/reference
+  scaler: standard # standard / minmax / robust
+  split:
+    mode: auto # event / chronological / auto
+    ratios: [0.6, 0.2, 0.2]
+    purge_gap_seconds: null
+  labeling:
+    mode: binary
+    mapping: null # company labels -> class IDs; never infer from sensor values
+  windows:
+    allow_event_crossing: true
+    sequence_length: null
+    stride: null
+    label_horizon_seconds: 0
+  events:
+    pre_event_seconds: null
+    post_event_seconds: null
+  output_directory: ../data/processed
+  scaler_directory: ../artifacts/scaler

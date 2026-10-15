@@ -1,0 +1,8 @@
+schema_version: 1
+extends: preprocessing_demo.yaml
+input:
+  patterns: [phase3-training.synthetic.csv]
+pipeline:
+  labeling:
+    mode: binary
+    mapping: {normal: 0, risk: 1}

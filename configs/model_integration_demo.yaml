@@ -1,0 +1,6 @@
+schema_version: 1
+extends: model_demo.yaml
+# Training config loader has no inheritance: the runner merges these overrides.
+model: {hidden_units: 16, sequence_length: 64}
+training: {epochs: 50, batch_size: 64}
+input_contract: {minimum_context_seconds: 6.4, require_slow_sensor_age: true}
