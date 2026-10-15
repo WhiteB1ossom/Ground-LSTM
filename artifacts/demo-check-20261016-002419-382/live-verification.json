@@ -1,0 +1,97 @@
+{
+  "actual_lstm": true,
+  "synthetic_demo": true,
+  "cases": {
+    "normal": {
+      "observations": 1800,
+      "inferences": {
+        "degradation": 174,
+        "surge": 174
+      },
+      "alarm_rows": {
+        "degradation": 0,
+        "surge": 0
+      },
+      "states": [
+        "NORMAL",
+        "UNAVAILABLE"
+      ],
+      "counter_resets": 0,
+      "output": "artifacts\\presentation-demo\\20261016-002822-668115-22aa9c"
+    },
+    "surge_only": {
+      "observations": 1800,
+      "inferences": {
+        "degradation": 174,
+        "surge": 174
+      },
+      "alarm_rows": {
+        "degradation": 0,
+        "surge": 300
+      },
+      "states": [
+        "NORMAL",
+        "SURGE_ACTIVITY",
+        "UNAVAILABLE"
+      ],
+      "counter_resets": 0,
+      "output": "artifacts\\presentation-demo\\20261016-002838-256264-517f59"
+    },
+    "heating_without_surge": {
+      "observations": 1800,
+      "inferences": {
+        "degradation": 174,
+        "surge": 174
+      },
+      "alarm_rows": {
+        "degradation": 1187,
+        "surge": 0
+      },
+      "states": [
+        "EQUIPMENT_REVIEW",
+        "NORMAL",
+        "UNAVAILABLE"
+      ],
+      "counter_resets": 0,
+      "output": "artifacts\\presentation-demo\\20261016-002853-677079-4a9538"
+    },
+    "both": {
+      "observations": 1800,
+      "inferences": {
+        "degradation": 174,
+        "surge": 174
+      },
+      "alarm_rows": {
+        "degradation": 1187,
+        "surge": 300
+      },
+      "states": [
+        "EQUIPMENT_REVIEW",
+        "EQUIPMENT_REVIEW_AND_SURGE",
+        "NORMAL",
+        "UNAVAILABLE"
+      ],
+      "counter_resets": 0,
+      "output": "artifacts\\presentation-demo\\20261016-002908-974509-2f5786"
+    },
+    "counter_reset": {
+      "observations": 1800,
+      "inferences": {
+        "degradation": 174,
+        "surge": 174
+      },
+      "alarm_rows": {
+        "degradation": 0,
+        "surge": 0
+      },
+      "states": [
+        "NORMAL",
+        "UNAVAILABLE"
+      ],
+      "counter_resets": 1,
+      "output": "artifacts\\presentation-demo\\20261016-002924-230105-354f93"
+    }
+  },
+  "pause_resume": "PASS",
+  "status": "PASS"
+}

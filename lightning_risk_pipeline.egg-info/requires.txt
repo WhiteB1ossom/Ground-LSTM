@@ -1,0 +1,14 @@
+pandas<4,>=2.2
+PyYAML<7,>=6
+pyarrow>=19
+tzdata>=2025.1
+scikit-learn<2,>=1.6
+
+[dev]
+pytest<10,>=8
+
+[ml]
+matplotlib<4,>=3.8
+
+[ml:python_version < "3.14"]
+tensorflow<3,>=2.16

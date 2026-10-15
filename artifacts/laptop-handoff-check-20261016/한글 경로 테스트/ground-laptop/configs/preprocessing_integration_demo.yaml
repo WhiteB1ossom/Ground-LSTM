@@ -1,0 +1,14 @@
+schema_version: 1
+extends: preprocessing.yaml
+sensors_config: sensors_integration_demo.yaml
+input:
+  directory: ../data/raw/integration
+  patterns: [training.synthetic.csv]
+  acquisition_kind: synthetic
+pipeline:
+  alignment_period_seconds: 0.1
+  include_age_features: true
+  labeling: {mode: binary, mapping: {normal: 0, risk: 1}}
+  split: {mode: event, purge_gap_seconds: 0}
+  windows: {sequence_length: 64, stride: 4, label_horizon_seconds: 0}
+  events: {pre_event_seconds: 5, post_event_seconds: 2}

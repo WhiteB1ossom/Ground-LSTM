@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "deployment_feasibility": "UNKNOWN",
+  "target": {
+    "schema_version": 1,
+    "flash_kb": null,
+    "ram_kb": null,
+    "cpu_mhz": null,
+    "architecture": null,
+    "tensor_arena_bytes": null,
+    "deployment_feasibility": "unknown"
+  },
+  "ring_array_payload_bytes": 7866,
+  "ring_capacity": 114,
+  "input_tensor_bytes": 3840,
+  "sequence_workspace_bytes": 576,
+  "portable_host": {
+    "status": "SUCCESS",
+    "exit_code": 0,
+    "mcu_verified": false
+  },
+  "tensor_arena_bytes": null,
+  "firmware_flash_bytes": null,
+  "raw_history_and_recorder_total_bytes": null,
+  "total_mcu_ram_bytes": null,
+  "mcu_latency": null,
+  "model_bytes": 17360,
+  "c_array_candidate_format": "float32",
+  "notes": [
+    "Host core compiled separately from TFLM adapter; target kernels/board not verified.",
+    "Arena includes state/scratch: do not double count.",
+    "Raw history, writer, stack and firmware require a target implementation."
+  ],
+  "ram_known_lower_bound_bytes": 12282
+}

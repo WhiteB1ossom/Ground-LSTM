@@ -1,0 +1,17 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791778467.693640  111912 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791778479.435345  111912 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791778484.832017  111912 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+W0000 00:00:1791778485.841908  111912 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1791778485.841979  111912 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1791778485.848061  111912 reader.cc:83] Reading SavedModel from: C:\Users\bloss\AppData\Local\Temp\lightning-export-bgyx0u15\saved_model_symbolic
+I0000 00:00:1791778485.849491  111912 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1791778485.849540  111912 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\bloss\AppData\Local\Temp\lightning-export-bgyx0u15\saved_model_symbolic
+I0000 00:00:1791778485.873157  111912 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1791778485.874773  111912 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1791778485.989718  111912 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\bloss\AppData\Local\Temp\lightning-export-bgyx0u15\saved_model_symbolic
+I0000 00:00:1791778486.008489  111912 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 160459 microseconds.
+I0000 00:00:1791778486.275171  111912 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1791778486.627465  111912 flatbuffer_export.cc:4302] Estimated count of arithmetic ops: 9379  ops, equivalently 4689  MACs

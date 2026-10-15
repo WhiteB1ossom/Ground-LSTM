@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "status": "SUCCESS",
+  "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\equipment-server\\server-equipment-20261015\\degradation.heldout.synthetic.csv",
+  "model": "lstm",
+  "speed": "max",
+  "synthetic_demo": true,
+  "observations": 30600,
+  "aligned_rows": 30600,
+  "model_version": "lstm32",
+  "decision_thresholds": {
+    "on": 0.5,
+    "off": 0.5,
+    "consecutive": 2
+  },
+  "status_counts": {
+    "WARMING_UP": 1071,
+    "READY": 2958,
+    "WAITING_FOR_STRIDE": 26571
+  },
+  "rejected_observations": [],
+  "rejected_observation_count": 0,
+  "buffer_capacity": 114,
+  "buffer_array_bytes": 18810,
+  "input_tensor_bytes": 9984,
+  "sequence_workspace_bytes": 576,
+  "elapsed_host_seconds": 47.346909400000186,
+  "inference_host_ms": {
+    "median": 2.2950999999999997,
+    "p95": 3.0995150000000002,
+    "sample_limit": 4096
+  },
+  "recorder": {
+    "status": "SUCCESS",
+    "shutdown_complete": true,
+    "shutdown_timed_out": false,
+    "writer_failed": false,
+    "pending_events": 0,
+    "shutdown_timeout_seconds": 5,
+    "saved_events": 13,
+    "dropped_events": 0,
+    "writer_errors": [],
+    "writer_error_count": 0,
+    "max_saved_events": 1000,
+    "storage_disabled": false,
+    "cleanup_error_count": 0,
+    "accepted_raw_observations": 30600,
+    "raw_history_capacity": 1024,
+    "max_raw_observations_per_event": 4096,
+    "raw_history_dropped": 0,
+    "raw_event_dropped": 0,
+    "queue_capacity": 64,
+    "history_capacity": 51
+  },
+  "timeline": {
+    "segment_bytes": 33554432,
+    "max_segments": 8,
+    "maximum_retained_bytes": 268435456,
+    "files": [
+      "timeline.jsonl",
+      "timeline.000001.jsonl",
+      "timeline.000002.jsonl",
+      "timeline.000003.jsonl"
+    ],
+    "retained_records": 30600,
+    "retained_payload_bytes": 127075067,
+    "written_records": 30600,
+    "evicted_records": 0,
+    "dropped_records": 0,
+    "retention_truncated": false,
+    "error_count": 0,
+    "errors": [],
+    "disabled": false
+  },
+  "inference_failure_count": 0,
+  "preprocessing_failure_count": 0,
+  "evaluation": {
+    "scope": "timestamp_replay_not_mcu_or_physical_validation",
+    "window": {
+      "samples": 2958,
+      "confusion_matrix": [
+        [
+          1464,
+          0
+        ],
+        [
+          2,
+          1492
+        ]
+      ],
+      "false_positives": 0,
+      "false_negatives": 2,
+      "precision": 1.0,
+      "recall": 0.998661311914324,
+      "f1": 0.999330207635633,
+      "accuracy": 0.9993238674780257,
+      "risk_false_positive_rate": 0.0,
+      "threshold": 0.5,
+      "scope": "window_level"
+    },
+    "total_seconds": 3060.0,
+    "normal_seconds": 1560.0,
+    "normal_valid_seconds": 1459.2,
+    "available_seconds": 2952.9,
+    "coverage": 0.965,
+    "risk_intervals": 12,
+    "detected_risk_intervals": 12,
+    "missed_risk_intervals": 0,
+    "incompletely_covered_risk_intervals": 1,
+    "missed_fully_covered_risk_intervals": 0,
+    "alarm_episodes": 25,
+    "false_alarm_episodes": 0,
+    "unmatched_alarm_episodes": 0,
+    "false_alarm_per_normal_valid_hour": 0.0,
+    "normal_alarm_seconds": 0.0,
+    "normal_alarm_seconds_including_unavailable": 69.3,
+    "normal_alarm_fraction": 0.0,
+    "detection_delays_seconds": [
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      1.3,
+      6.3
+    ],
+    "delay_sample_limit": 1024,
+    "median_detection_delay_seconds": 1.3,
+    "unclassified_rows": 0,
+    "rule_condition_by_truth_by_prediction": [
+      [
+        [
+          1464,
+          0
+        ],
+        [
+          0,
+          120
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1372
+        ]
+      ]
+    ],
+    "rule_unknown_scored_windows": 0,
+    "rule_cube_axes": [
+      "condition_met:false/true",
+      "truth:normal/risk",
+      "prediction:normal/risk"
+    ],
+    "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+  },
+  "mcu_verified": false,
+  "hardware_actuation_performed": false
+}

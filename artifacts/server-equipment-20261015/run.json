@@ -1,0 +1,849 @@
+{
+  "schema_version": 1,
+  "status": "SERVER_SOFTWARE_COMPLETE_PHYSICAL_VALIDATION_PENDING",
+  "deployment_target": "server",
+  "synthetic_demo": true,
+  "physical_validation": false,
+  "options": {
+    "schema_version": 1,
+    "purpose": "SERVER_SOFTWARE_EQUIPMENT_REVIEW_NOT_CERTIFIED_DIAGNOSIS",
+    "deployment_target": "server",
+    "preprocessing_config": "preprocessing_equipment_server.yaml",
+    "model_base_config": "model_demo.yaml",
+    "experiments": [
+      {
+        "name": "lstm32",
+        "hidden_units": 32,
+        "seed": 42
+      },
+      {
+        "name": "lstm64",
+        "hidden_units": 64,
+        "seed": 42
+      },
+      {
+        "name": "lstm128",
+        "hidden_units": 128,
+        "seed": 42
+      }
+    ],
+    "training": {
+      "epochs": 50,
+      "batch_size": 128,
+      "early_stopping_patience": 8
+    },
+    "selection": {
+      "split": "validation",
+      "metric": "f1",
+      "size_penalty": false,
+      "mcu_gate": false
+    },
+    "synthetic": {
+      "seed": 20261015,
+      "session_seconds": 180,
+      "replicas_by_split": {
+        "train": 3,
+        "validation": 1,
+        "test": 1
+      },
+      "input_voltage_reference": 220,
+      "zero_response": {
+        "enabled": true,
+        "target_V": 0,
+        "decay_seconds": 0.5,
+        "scope": "hypothetical_software_response_not_verified_device_transfer_function"
+      }
+    },
+    "replay": {
+      "mode": "advisory",
+      "hardware_actuation_enabled": false,
+      "minimum_consecutive_detections": 2,
+      "off_threshold_ratio": 1.0,
+      "pre_event_seconds": 5,
+      "post_event_seconds": 2,
+      "writer_queue_capacity": 64,
+      "max_active_events": 4,
+      "max_event_seconds": 30,
+      "max_saved_events": 1000,
+      "shutdown_timeout_seconds": 5,
+      "rules": [
+        {
+          "sensor": "ground_voltage_a",
+          "unit": "V_AC",
+          "operator": "ge",
+          "value": 2
+        },
+        {
+          "sensor": "ground_voltage_b",
+          "unit": "V_AC",
+          "operator": "ge",
+          "value": 2
+        },
+        {
+          "sensor": "leakage_current",
+          "unit": "A",
+          "operator": "ge",
+          "value": 0.002
+        },
+        {
+          "sensor": "limiter_temp_a",
+          "unit": "degC",
+          "operator": "ge",
+          "value": 45
+        },
+        {
+          "sensor": "limiter_temp_b",
+          "unit": "degC",
+          "operator": "ge",
+          "value": 45
+        },
+        {
+          "sensor": "limiter_temp_c",
+          "unit": "degC",
+          "operator": "ge",
+          "value": 45
+        },
+        {
+          "sensor": "humidity",
+          "unit": "percent_RH",
+          "operator": "ge",
+          "value": 70
+        }
+      ],
+      "rule_combination": "any"
+    },
+    "criteria_provenance": {
+      "values": "user_2026_10_15_replaces_earlier_1mA_25degC_60percent",
+      "comparison_operator": "engineering_ge_review_default_user_delegated_not_company_certified",
+      "temperature_reference": "absolute_degC_review_default",
+      "ambient_25degC": "context_reference_not_automatic_degradation_or_lightning_label",
+      "input_voltage": "measured_input_and_configured_reference_difference_no_universal_alarm_limit",
+      "surge_counter": "lightning_or_overvoltage_counts_not_confirmed_lightning_occurrences",
+      "references": [
+        "https://eca3g.com/home/sub.php?menukey=487",
+        "https://eca3g.com/home/main.php",
+        "https://eca3g.com/home/images/sub/ground_catalogue.pdf"
+      ]
+    }
+  },
+  "stages": {
+    "scenarios": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\equipment-server\\server-equipment-20261015",
+      "rows": 153000,
+      "sessions": 85
+    },
+    "degradation": {
+      "status": "SUCCESS",
+      "dataset": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\degradation\\dataset",
+      "candidates": [
+        {
+          "name": "lstm32",
+          "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\degradation\\models\\lstm32",
+          "validation": {
+            "samples": 2958,
+            "accuracy": 0.9996619337390128,
+            "precision": 0.9993311036789297,
+            "recall": 1.0,
+            "f1": 0.9996654399464704,
+            "risk_pr_auc_trapezoidal": 0.999999103956904,
+            "risk_average_precision": 0.9999991042567845,
+            "false_negatives": 0,
+            "false_positives": 1,
+            "confusion_matrix": [
+              [
+                1463,
+                1
+              ],
+              [
+                0,
+                1494
+              ]
+            ],
+            "risk_false_negative_rate": 0.0,
+            "risk_false_positive_rate": 0.0006830601092896175,
+            "risk_prevalence": 0.5050709939148073,
+            "predicted_risk_fraction": 0.5054090601757945,
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 1464,
+                "false_negatives": 1,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 1494,
+                "false_negatives": 0,
+                "false_positives": 1
+              }
+            ],
+            "threshold": 0.5,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary",
+            "event_summary": {
+              "status": "evaluated",
+              "scope": "labeled_device_session_event_groups",
+              "risk_groups": 12,
+              "detected_in_positive_windows": 12,
+              "missed_risk_groups": 0,
+              "incompletely_covered_risk_groups": 0,
+              "risk_group_detection_fraction": 1.0,
+              "normal_groups": 5,
+              "normal_groups_with_false_alarm": 1,
+              "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+            }
+          },
+          "parameters": 9249,
+          "epochs_completed": 50,
+          "best_epoch": 47
+        },
+        {
+          "name": "lstm64",
+          "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\degradation\\models\\lstm64",
+          "validation": {
+            "samples": 2958,
+            "accuracy": 0.9976335361730899,
+            "precision": 1.0,
+            "recall": 0.9953145917001339,
+            "f1": 0.9976517946997652,
+            "risk_pr_auc_trapezoidal": 0.9994058810282562,
+            "risk_average_precision": 0.9994060443125498,
+            "false_negatives": 7,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                1464,
+                0
+              ],
+              [
+                7,
+                1487
+              ]
+            ],
+            "risk_false_negative_rate": 0.004685408299866131,
+            "risk_false_positive_rate": 0.0,
+            "risk_prevalence": 0.5050709939148073,
+            "predicted_risk_fraction": 0.5027045300878973,
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 1464,
+                "false_negatives": 0,
+                "false_positives": 7
+              },
+              {
+                "class_id": 1,
+                "support": 1494,
+                "false_negatives": 7,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.28704118728637695,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary",
+            "event_summary": {
+              "status": "evaluated",
+              "scope": "labeled_device_session_event_groups",
+              "risk_groups": 12,
+              "detected_in_positive_windows": 12,
+              "missed_risk_groups": 0,
+              "incompletely_covered_risk_groups": 0,
+              "risk_group_detection_fraction": 1.0,
+              "normal_groups": 5,
+              "normal_groups_with_false_alarm": 0,
+              "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+            }
+          },
+          "parameters": 26689,
+          "epochs_completed": 11,
+          "best_epoch": 4
+        },
+        {
+          "name": "lstm128",
+          "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\degradation\\models\\lstm128",
+          "validation": {
+            "samples": 2958,
+            "accuracy": 0.9969574036511156,
+            "precision": 0.9953302201467645,
+            "recall": 0.998661311914324,
+            "f1": 0.9969929836284664,
+            "risk_pr_auc_trapezoidal": 0.9999745189166673,
+            "risk_average_precision": 0.9999745274258123,
+            "false_negatives": 2,
+            "false_positives": 7,
+            "confusion_matrix": [
+              [
+                1457,
+                7
+              ],
+              [
+                2,
+                1492
+              ]
+            ],
+            "risk_false_negative_rate": 0.0013386880856760374,
+            "risk_false_positive_rate": 0.0047814207650273225,
+            "risk_prevalence": 0.5050709939148073,
+            "predicted_risk_fraction": 0.506761325219743,
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 1464,
+                "false_negatives": 7,
+                "false_positives": 2
+              },
+              {
+                "class_id": 1,
+                "support": 1494,
+                "false_negatives": 2,
+                "false_positives": 7
+              }
+            ],
+            "threshold": 0.03978462144732475,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary",
+            "event_summary": {
+              "status": "evaluated",
+              "scope": "labeled_device_session_event_groups",
+              "risk_groups": 12,
+              "detected_in_positive_windows": 12,
+              "missed_risk_groups": 0,
+              "incompletely_covered_risk_groups": 0,
+              "risk_group_detection_fraction": 1.0,
+              "normal_groups": 5,
+              "normal_groups_with_false_alarm": 3,
+              "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+            }
+          },
+          "parameters": 86145,
+          "epochs_completed": 12,
+          "best_epoch": 4
+        }
+      ],
+      "selected": "lstm32",
+      "test_replay": {
+        "schema_version": 1,
+        "status": "SUCCESS",
+        "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\equipment-server\\server-equipment-20261015\\degradation.heldout.synthetic.csv",
+        "model": "lstm",
+        "speed": "max",
+        "synthetic_demo": true,
+        "observations": 30600,
+        "aligned_rows": 30600,
+        "model_version": "lstm32",
+        "decision_thresholds": {
+          "on": 0.5,
+          "off": 0.5,
+          "consecutive": 2
+        },
+        "status_counts": {
+          "WARMING_UP": 1071,
+          "READY": 2958,
+          "WAITING_FOR_STRIDE": 26571
+        },
+        "rejected_observations": [],
+        "rejected_observation_count": 0,
+        "buffer_capacity": 114,
+        "buffer_array_bytes": 18810,
+        "input_tensor_bytes": 9984,
+        "sequence_workspace_bytes": 576,
+        "elapsed_host_seconds": 47.346909400000186,
+        "inference_host_ms": {
+          "median": 2.2950999999999997,
+          "p95": 3.0995150000000002,
+          "sample_limit": 4096
+        },
+        "recorder": {
+          "status": "SUCCESS",
+          "shutdown_complete": true,
+          "shutdown_timed_out": false,
+          "writer_failed": false,
+          "pending_events": 0,
+          "shutdown_timeout_seconds": 5,
+          "saved_events": 13,
+          "dropped_events": 0,
+          "writer_errors": [],
+          "writer_error_count": 0,
+          "max_saved_events": 1000,
+          "storage_disabled": false,
+          "cleanup_error_count": 0,
+          "accepted_raw_observations": 30600,
+          "raw_history_capacity": 1024,
+          "max_raw_observations_per_event": 4096,
+          "raw_history_dropped": 0,
+          "raw_event_dropped": 0,
+          "queue_capacity": 64,
+          "history_capacity": 51
+        },
+        "timeline": {
+          "segment_bytes": 33554432,
+          "max_segments": 8,
+          "maximum_retained_bytes": 268435456,
+          "files": [
+            "timeline.jsonl",
+            "timeline.000001.jsonl",
+            "timeline.000002.jsonl",
+            "timeline.000003.jsonl"
+          ],
+          "retained_records": 30600,
+          "retained_payload_bytes": 127075067,
+          "written_records": 30600,
+          "evicted_records": 0,
+          "dropped_records": 0,
+          "retention_truncated": false,
+          "error_count": 0,
+          "errors": [],
+          "disabled": false
+        },
+        "inference_failure_count": 0,
+        "preprocessing_failure_count": 0,
+        "evaluation": {
+          "scope": "timestamp_replay_not_mcu_or_physical_validation",
+          "window": {
+            "samples": 2958,
+            "confusion_matrix": [
+              [
+                1464,
+                0
+              ],
+              [
+                2,
+                1492
+              ]
+            ],
+            "false_positives": 0,
+            "false_negatives": 2,
+            "precision": 1.0,
+            "recall": 0.998661311914324,
+            "f1": 0.999330207635633,
+            "accuracy": 0.9993238674780257,
+            "risk_false_positive_rate": 0.0,
+            "threshold": 0.5,
+            "scope": "window_level"
+          },
+          "total_seconds": 3060.0,
+          "normal_seconds": 1560.0,
+          "normal_valid_seconds": 1459.2,
+          "available_seconds": 2952.9,
+          "coverage": 0.965,
+          "risk_intervals": 12,
+          "detected_risk_intervals": 12,
+          "missed_risk_intervals": 0,
+          "incompletely_covered_risk_intervals": 1,
+          "missed_fully_covered_risk_intervals": 0,
+          "alarm_episodes": 25,
+          "false_alarm_episodes": 0,
+          "unmatched_alarm_episodes": 0,
+          "false_alarm_per_normal_valid_hour": 0.0,
+          "normal_alarm_seconds": 0.0,
+          "normal_alarm_seconds_including_unavailable": 69.3,
+          "normal_alarm_fraction": 0.0,
+          "detection_delays_seconds": [
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            6.3
+          ],
+          "delay_sample_limit": 1024,
+          "median_detection_delay_seconds": 1.3,
+          "unclassified_rows": 0,
+          "rule_condition_by_truth_by_prediction": [
+            [
+              [
+                1464,
+                0
+              ],
+              [
+                0,
+                120
+              ]
+            ],
+            [
+              [
+                0,
+                0
+              ],
+              [
+                2,
+                1372
+              ]
+            ]
+          ],
+          "rule_unknown_scored_windows": 0,
+          "rule_cube_axes": [
+            "condition_met:false/true",
+            "truth:normal/risk",
+            "prediction:normal/risk"
+          ],
+          "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+        },
+        "mcu_verified": false,
+        "hardware_actuation_performed": false
+      }
+    },
+    "surge": {
+      "status": "SUCCESS",
+      "dataset": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\surge\\dataset",
+      "candidates": [
+        {
+          "name": "lstm32",
+          "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\surge\\models\\lstm32",
+          "validation": {
+            "samples": 2958,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 0.9999999999999998,
+            "risk_average_precision": 0.9999999999999998,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                2868,
+                0
+              ],
+              [
+                0,
+                90
+              ]
+            ],
+            "risk_false_negative_rate": 0.0,
+            "risk_false_positive_rate": 0.0,
+            "risk_prevalence": 0.030425963488843813,
+            "predicted_risk_fraction": 0.030425963488843813,
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 2868,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 90,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.5,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary",
+            "event_summary": {
+              "status": "evaluated",
+              "scope": "labeled_device_session_event_groups",
+              "risk_groups": 3,
+              "detected_in_positive_windows": 3,
+              "missed_risk_groups": 0,
+              "incompletely_covered_risk_groups": 0,
+              "risk_group_detection_fraction": 1.0,
+              "normal_groups": 14,
+              "normal_groups_with_false_alarm": 0,
+              "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+            }
+          },
+          "parameters": 9249,
+          "epochs_completed": 49,
+          "best_epoch": 49
+        },
+        {
+          "name": "lstm64",
+          "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\surge\\models\\lstm64",
+          "validation": {
+            "samples": 2958,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 0.9999999999999998,
+            "risk_average_precision": 0.9999999999999998,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                2868,
+                0
+              ],
+              [
+                0,
+                90
+              ]
+            ],
+            "risk_false_negative_rate": 0.0,
+            "risk_false_positive_rate": 0.0,
+            "risk_prevalence": 0.030425963488843813,
+            "predicted_risk_fraction": 0.030425963488843813,
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 2868,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 90,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.5,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary",
+            "event_summary": {
+              "status": "evaluated",
+              "scope": "labeled_device_session_event_groups",
+              "risk_groups": 3,
+              "detected_in_positive_windows": 3,
+              "missed_risk_groups": 0,
+              "incompletely_covered_risk_groups": 0,
+              "risk_group_detection_fraction": 1.0,
+              "normal_groups": 14,
+              "normal_groups_with_false_alarm": 0,
+              "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+            }
+          },
+          "parameters": 26689,
+          "epochs_completed": 42,
+          "best_epoch": 42
+        },
+        {
+          "name": "lstm128",
+          "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\surge\\models\\lstm128",
+          "validation": {
+            "samples": 2958,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 0.9999999999999998,
+            "risk_average_precision": 0.9999999999999998,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                2868,
+                0
+              ],
+              [
+                0,
+                90
+              ]
+            ],
+            "risk_false_negative_rate": 0.0,
+            "risk_false_positive_rate": 0.0,
+            "risk_prevalence": 0.030425963488843813,
+            "predicted_risk_fraction": 0.030425963488843813,
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 2868,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 90,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.5,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary",
+            "event_summary": {
+              "status": "evaluated",
+              "scope": "labeled_device_session_event_groups",
+              "risk_groups": 3,
+              "detected_in_positive_windows": 3,
+              "missed_risk_groups": 0,
+              "incompletely_covered_risk_groups": 0,
+              "risk_group_detection_fraction": 1.0,
+              "normal_groups": 14,
+              "normal_groups_with_false_alarm": 0,
+              "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+            }
+          },
+          "parameters": 86145,
+          "epochs_completed": 27,
+          "best_epoch": 27
+        }
+      ],
+      "selected": "lstm32",
+      "test_replay": {
+        "schema_version": 1,
+        "status": "SUCCESS",
+        "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\equipment-server\\server-equipment-20261015\\surge.heldout.synthetic.csv",
+        "model": "lstm",
+        "speed": "max",
+        "synthetic_demo": true,
+        "observations": 30600,
+        "aligned_rows": 30600,
+        "model_version": "lstm32",
+        "decision_thresholds": {
+          "on": 0.5,
+          "off": 0.5,
+          "consecutive": 1
+        },
+        "status_counts": {
+          "WARMING_UP": 1071,
+          "READY": 2958,
+          "WAITING_FOR_STRIDE": 26571
+        },
+        "rejected_observations": [],
+        "rejected_observation_count": 0,
+        "buffer_capacity": 114,
+        "buffer_array_bytes": 18810,
+        "input_tensor_bytes": 9984,
+        "sequence_workspace_bytes": 576,
+        "elapsed_host_seconds": 40.49946099999988,
+        "inference_host_ms": {
+          "median": 2.2174,
+          "p95": 3.029655,
+          "sample_limit": 4096
+        },
+        "recorder": {
+          "status": "SUCCESS",
+          "shutdown_complete": true,
+          "shutdown_timed_out": false,
+          "writer_failed": false,
+          "pending_events": 0,
+          "shutdown_timeout_seconds": 5,
+          "saved_events": 9,
+          "dropped_events": 0,
+          "writer_errors": [],
+          "writer_error_count": 0,
+          "max_saved_events": 1000,
+          "storage_disabled": false,
+          "cleanup_error_count": 0,
+          "accepted_raw_observations": 30600,
+          "raw_history_capacity": 1024,
+          "max_raw_observations_per_event": 4096,
+          "raw_history_dropped": 0,
+          "raw_event_dropped": 0,
+          "queue_capacity": 64,
+          "history_capacity": 51
+        },
+        "timeline": {
+          "segment_bytes": 33554432,
+          "max_segments": 8,
+          "maximum_retained_bytes": 268435456,
+          "files": [
+            "timeline.jsonl",
+            "timeline.000001.jsonl",
+            "timeline.000002.jsonl",
+            "timeline.000003.jsonl"
+          ],
+          "retained_records": 30600,
+          "retained_payload_bytes": 103893531,
+          "written_records": 30600,
+          "evicted_records": 0,
+          "dropped_records": 0,
+          "retention_truncated": false,
+          "error_count": 0,
+          "errors": [],
+          "disabled": false
+        },
+        "inference_failure_count": 0,
+        "preprocessing_failure_count": 0,
+        "evaluation": {
+          "scope": "timestamp_replay_not_mcu_or_physical_validation",
+          "window": {
+            "samples": 2958,
+            "confusion_matrix": [
+              [
+                2868,
+                0
+              ],
+              [
+                0,
+                90
+              ]
+            ],
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "risk_false_positive_rate": 0.0,
+            "threshold": 0.5,
+            "scope": "window_level"
+          },
+          "total_seconds": 3060.0,
+          "normal_seconds": 2970.0,
+          "normal_valid_seconds": 2862.9,
+          "available_seconds": 2952.9,
+          "coverage": 0.965,
+          "risk_intervals": 9,
+          "detected_risk_intervals": 9,
+          "missed_risk_intervals": 0,
+          "incompletely_covered_risk_intervals": 0,
+          "missed_fully_covered_risk_intervals": 0,
+          "alarm_episodes": 9,
+          "false_alarm_episodes": 0,
+          "unmatched_alarm_episodes": 0,
+          "false_alarm_per_normal_valid_hour": 0.0,
+          "normal_alarm_seconds": 2.7,
+          "normal_alarm_seconds_including_unavailable": 2.7,
+          "normal_alarm_fraction": 0.0009430996541967935,
+          "detection_delays_seconds": [
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "delay_sample_limit": 1024,
+          "median_detection_delay_seconds": 0.3,
+          "unclassified_rows": 0,
+          "rule_condition_by_truth_by_prediction": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "rule_unknown_scored_windows": 2958,
+          "rule_cube_axes": [
+            "condition_met:false/true",
+            "truth:normal/risk",
+            "prediction:normal/risk"
+          ],
+          "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+        },
+        "mcu_verified": false,
+        "hardware_actuation_performed": false
+      }
+    }
+  },
+  "heldout_input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\equipment-server\\server-equipment-20261015\\heldout.synthetic.csv"
+}

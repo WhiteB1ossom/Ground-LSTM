@@ -1,0 +1,775 @@
+{
+  "schema_version": 1,
+  "purpose": "SOFTWARE_SCENARIOS_NOT_PHYSICAL_PERFORMANCE",
+  "seed": 20261012,
+  "scenario_count": 60,
+  "fault_scenario_count": 10,
+  "training_rows": 36000,
+  "fault_rows": 6000,
+  "total_scenario_rows": 42000,
+  "long_normal_rows": 72000,
+  "scenario_index": [
+    {
+      "session_id": "case-000",
+      "kind": "single",
+      "planned_split": "train",
+      "onset_seconds": 26.453982675291904,
+      "duration_seconds": 10.81741347470837,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-001",
+      "kind": "transition",
+      "planned_split": "train",
+      "onset_seconds": 27.235756154797212,
+      "duration_seconds": 8.33663777930944,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-002",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 22.531917333878514,
+      "duration_seconds": 8.343973463930855,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-003",
+      "kind": "compound",
+      "planned_split": "train",
+      "onset_seconds": 20.88798543356373,
+      "duration_seconds": 10.517001993076239,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-004",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 18.37162403378276,
+      "duration_seconds": 10.639487447185346,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-005",
+      "kind": "transition",
+      "planned_split": "train",
+      "onset_seconds": 24.047085362296308,
+      "duration_seconds": 9.427619205051812,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-006",
+      "kind": "boundary",
+      "planned_split": "train",
+      "onset_seconds": 29.24385101466725,
+      "duration_seconds": 9.018585203897079,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-007",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 25.603931675007843,
+      "duration_seconds": 10.469815376746688,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-008",
+      "kind": "boundary",
+      "planned_split": "train",
+      "onset_seconds": 28.74937937435775,
+      "duration_seconds": 10.797853397087167,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-009",
+      "kind": "compound",
+      "planned_split": "train",
+      "onset_seconds": 27.994154569570874,
+      "duration_seconds": 11.816296097502999,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-010",
+      "kind": "transition",
+      "planned_split": "train",
+      "onset_seconds": 25.504408592382774,
+      "duration_seconds": 9.56499501219179,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-011",
+      "kind": "compound",
+      "planned_split": "train",
+      "onset_seconds": 26.105288742621283,
+      "duration_seconds": 8.546904450734596,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-012",
+      "kind": "single",
+      "planned_split": "train",
+      "onset_seconds": 19.251139114006143,
+      "duration_seconds": 7.710196964006215,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-013",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 24.813841992686683,
+      "duration_seconds": 11.645985731923219,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-014",
+      "kind": "compound",
+      "planned_split": "train",
+      "onset_seconds": 18.215564867248524,
+      "duration_seconds": 11.129534389249685,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-015",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 19.101487582871354,
+      "duration_seconds": 6.836751069008539,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-016",
+      "kind": "boundary",
+      "planned_split": "train",
+      "onset_seconds": 25.743751485871428,
+      "duration_seconds": 8.233561514639426,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-017",
+      "kind": "single",
+      "planned_split": "train",
+      "onset_seconds": 21.38049687596091,
+      "duration_seconds": 7.990338216545675,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-018",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 28.262037535985183,
+      "duration_seconds": 11.652231914428652,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-019",
+      "kind": "boundary",
+      "planned_split": "train",
+      "onset_seconds": 23.255340227714957,
+      "duration_seconds": 9.671111386958636,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-020",
+      "kind": "single",
+      "planned_split": "train",
+      "onset_seconds": 29.524837228777876,
+      "duration_seconds": 10.77187684973178,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-021",
+      "kind": "compound",
+      "planned_split": "train",
+      "onset_seconds": 26.650843409022603,
+      "duration_seconds": 10.77147485603335,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-022",
+      "kind": "single",
+      "planned_split": "train",
+      "onset_seconds": 25.159406058683928,
+      "duration_seconds": 8.546135301257532,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-023",
+      "kind": "boundary",
+      "planned_split": "train",
+      "onset_seconds": 26.519667321170594,
+      "duration_seconds": 8.051504185262427,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-024",
+      "kind": "compound",
+      "planned_split": "train",
+      "onset_seconds": 18.59048693657244,
+      "duration_seconds": 6.577067130571738,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-025",
+      "kind": "single",
+      "planned_split": "train",
+      "onset_seconds": 19.136466399105096,
+      "duration_seconds": 10.635085552832134,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-026",
+      "kind": "transition",
+      "planned_split": "train",
+      "onset_seconds": 28.558951497703834,
+      "duration_seconds": 7.223993793458071,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-027",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 26.45774215670167,
+      "duration_seconds": 11.193566580692622,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-028",
+      "kind": "transition",
+      "planned_split": "train",
+      "onset_seconds": 19.004249298176816,
+      "duration_seconds": 9.856231773360648,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-029",
+      "kind": "transition",
+      "planned_split": "train",
+      "onset_seconds": 23.037980477176273,
+      "duration_seconds": 9.47404517628981,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-030",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 28.51046233167945,
+      "duration_seconds": 8.31373092909875,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-031",
+      "kind": "boundary",
+      "planned_split": "train",
+      "onset_seconds": 23.284919423057342,
+      "duration_seconds": 9.891573626668794,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-032",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 19.858358864325787,
+      "duration_seconds": 9.62037603697812,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-033",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 19.193099296899288,
+      "duration_seconds": 11.664640844887957,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-034",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 27.54339785865082,
+      "duration_seconds": 10.144146093278188,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-035",
+      "kind": "normal",
+      "planned_split": "train",
+      "onset_seconds": 23.17797014131196,
+      "duration_seconds": 10.497844816774489,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-036",
+      "kind": "single",
+      "planned_split": "validation",
+      "onset_seconds": 21.15033337049917,
+      "duration_seconds": 10.566414956526492,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-037",
+      "kind": "transition",
+      "planned_split": "validation",
+      "onset_seconds": 28.82850734311196,
+      "duration_seconds": 8.582732766991839,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-038",
+      "kind": "compound",
+      "planned_split": "validation",
+      "onset_seconds": 29.96583214480734,
+      "duration_seconds": 9.117035149309903,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-039",
+      "kind": "transition",
+      "planned_split": "validation",
+      "onset_seconds": 27.69339416939212,
+      "duration_seconds": 7.823264440183772,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-040",
+      "kind": "normal",
+      "planned_split": "validation",
+      "onset_seconds": 26.799294408479465,
+      "duration_seconds": 7.296097722476501,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-041",
+      "kind": "single",
+      "planned_split": "validation",
+      "onset_seconds": 28.538860931166106,
+      "duration_seconds": 10.263740287934368,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-042",
+      "kind": "normal",
+      "planned_split": "validation",
+      "onset_seconds": 24.16357128319399,
+      "duration_seconds": 9.222767371383584,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-043",
+      "kind": "normal",
+      "planned_split": "validation",
+      "onset_seconds": 22.96808785226792,
+      "duration_seconds": 6.996738963640373,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-044",
+      "kind": "normal",
+      "planned_split": "validation",
+      "onset_seconds": 19.314721444753552,
+      "duration_seconds": 8.099983089332202,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-045",
+      "kind": "boundary",
+      "planned_split": "validation",
+      "onset_seconds": 20.755803829210155,
+      "duration_seconds": 8.979430891173113,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-046",
+      "kind": "boundary",
+      "planned_split": "validation",
+      "onset_seconds": 21.202190746878273,
+      "duration_seconds": 7.574579361359696,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-047",
+      "kind": "compound",
+      "planned_split": "validation",
+      "onset_seconds": 23.833039844431916,
+      "duration_seconds": 6.41279446658764,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-048",
+      "kind": "compound",
+      "planned_split": "test",
+      "onset_seconds": 19.40491324710314,
+      "duration_seconds": 10.38872878030218,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-049",
+      "kind": "single",
+      "planned_split": "test",
+      "onset_seconds": 23.888813541926474,
+      "duration_seconds": 7.979303087293561,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-050",
+      "kind": "boundary",
+      "planned_split": "test",
+      "onset_seconds": 28.591371263532448,
+      "duration_seconds": 11.213200053122184,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-051",
+      "kind": "transition",
+      "planned_split": "test",
+      "onset_seconds": 18.916668875258445,
+      "duration_seconds": 9.173697541600681,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-052",
+      "kind": "compound",
+      "planned_split": "test",
+      "onset_seconds": 21.47628680495944,
+      "duration_seconds": 6.999436505976654,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-053",
+      "kind": "normal",
+      "planned_split": "test",
+      "onset_seconds": 27.693921543966304,
+      "duration_seconds": 7.464336740652794,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-054",
+      "kind": "transition",
+      "planned_split": "test",
+      "onset_seconds": 22.506913729664518,
+      "duration_seconds": 11.564830332866432,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-055",
+      "kind": "normal",
+      "planned_split": "test",
+      "onset_seconds": 24.191837504117114,
+      "duration_seconds": 11.044630004906727,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-056",
+      "kind": "normal",
+      "planned_split": "test",
+      "onset_seconds": 25.633172937171313,
+      "duration_seconds": 6.001568328415735,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-057",
+      "kind": "normal",
+      "planned_split": "test",
+      "onset_seconds": 25.659978873212555,
+      "duration_seconds": 8.735642537918235,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-058",
+      "kind": "boundary",
+      "planned_split": "test",
+      "onset_seconds": 19.40338318627438,
+      "duration_seconds": 10.119671457238585,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-059",
+      "kind": "single",
+      "planned_split": "test",
+      "onset_seconds": 27.4151706907603,
+      "duration_seconds": 11.39012294756851,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-060",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 21.474765974244548,
+      "duration_seconds": 10.88844744892911,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-061",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 29.187813855041696,
+      "duration_seconds": 8.16365680476721,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-062",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 20.815622506530573,
+      "duration_seconds": 10.086582300075783,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-063",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 18.93046126790962,
+      "duration_seconds": 8.042808053298197,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-064",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 21.100276348683163,
+      "duration_seconds": 9.496095840004392,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-065",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 22.57585918482616,
+      "duration_seconds": 8.493135087412533,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-066",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 25.13739109988476,
+      "duration_seconds": 8.383319748530441,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-067",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 21.3753202562166,
+      "duration_seconds": 11.046450535621016,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-068",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 25.936846632007583,
+      "duration_seconds": 10.204788057687074,
+      "rows": 600,
+      "fixture_label_only": true
+    },
+    {
+      "session_id": "case-069",
+      "kind": "fault",
+      "planned_split": "fault",
+      "onset_seconds": 21.120014004473653,
+      "duration_seconds": 7.965068295419096,
+      "rows": 600,
+      "fixture_label_only": true
+    }
+  ],
+  "sensors": [
+    {
+      "name": "ground_voltage_a",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 50,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "ground_voltage_b",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 50,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "leakage_current",
+      "unit": "A",
+      "expected_min": 0.001,
+      "expected_max": 1,
+      "nominal_sampling_period": 1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "limiter_temp_a",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_b",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_c",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "humidity",
+      "unit": "percent_RH",
+      "expected_min": 20,
+      "expected_max": 90,
+      "nominal_sampling_period": 3600,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 7200,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "ambient_temp",
+      "unit": "degC",
+      "expected_min": -20,
+      "expected_max": 80,
+      "nominal_sampling_period": 3600,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 7200,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "input_voltage",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 1500,
+      "nominal_sampling_period": 1,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "lightning_sensor",
+      "unit": "binary",
+      "expected_min": 0,
+      "expected_max": 1,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    }
+  ],
+  "files": {
+    "faults.synthetic.csv": "d34ffed6fb962fcd82cd613dde8f066cb54712834e06181e388d0072ed2fc8e6",
+    "normal-hour.synthetic.csv": "3f6993ccca028faff9ccedd39969246395d35b28ac305551705a5e82ecf5e9b7",
+    "training.synthetic.csv": "0c4bcb0b8814803c7eeaa578fb5cabd69df00ee8c0aba7c4c49f857c87132df9"
+  },
+  "notes": [
+    "Source range/unit fixture only; thresholds and labels have no physical validation.",
+    "Staleness overrides are software test settings.",
+    "Input-voltage unit remains source-name interpretation."
+  ]
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+extends: preprocessing.yaml
+input:
+  directory: ../data/raw/field_measurement
+  acquisition_kind: field_measurement
+# Company-confirmed sensor settings and pipeline parameters are still required.

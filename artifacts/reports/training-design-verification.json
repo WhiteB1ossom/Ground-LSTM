@@ -1,0 +1,21 @@
+{
+  "tests_passed": 125,
+  "model_reload_matches": true,
+  "pip_check": "passed",
+  "compileall": "passed",
+  "synthetic_fixture_only": true,
+  "experiment": "artifacts/models/rational-demo-20261005",
+  "training_control": {
+    "stop_reason": "epoch_budget_reached",
+    "maximum_epochs": 50,
+    "learning_rate_schedule": {
+      "enabled": true,
+      "factor": 0.5,
+      "patience": 3,
+      "min_learning_rate": 1e-05
+    },
+    "best_epoch_at_budget_boundary": true,
+    "convergence_guaranteed": false
+  },
+  "standard_profile_trained": false
+}

@@ -1,0 +1,17 @@
+schema_version: 1
+extends: preprocessing_integration_demo.yaml
+sensors_config: sensors_equipment_server.yaml
+input: {directory: ../data/raw/equipment-server, patterns: [training.synthetic.csv], acquisition_kind: synthetic}
+pipeline:
+  features: [current_value]
+  windows: {sequence_length: 64, stride: 10, label_horizon_seconds: 0}
+  equipment_features:
+    counter_sensor: lightning_sensor
+    counter_window_seconds: 10
+    ambient_sensor: ambient_temp
+    ambient_reference_degC: 25
+    limiter_sensors: [limiter_temp_a, limiter_temp_b, limiter_temp_c]
+    input_voltage_sensor: input_voltage
+    input_voltage_reference: null
+    response_sensors: [ground_voltage_a, ground_voltage_b]
+    response_window_seconds: 10

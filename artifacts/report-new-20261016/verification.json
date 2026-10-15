@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "output": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\그라운드 보고서 방경식 5회차.hwp",
+  "sha256": "2abdf7255e015fd90949d0ffe5bedefe8a91e5332a193f7cad8df01ee936c413",
+  "pages": 3,
+  "cover_pages": 1,
+  "body_pages": 2,
+  "embedded_visuals": 2,
+  "form_tables_preserved": 5,
+  "matching_continuation_tables": 2,
+  "originals_unchanged": 4,
+  "round": 5,
+  "attendance_date_and_time": "BLANK",
+  "independent_hwp_parser": "PASS_NO_DROPPED_OR_UNCONVERTED_ITEMS",
+  "visual_qa": "COVER_AND_TWO_BODY_PAGES_INSPECTED",
+  "native_hancom_open": "UNAVAILABLE_COM_SERVER_EXECUTION_FAILURE_0x80080005",
+  "render_font_substitutions": 3,
+  "physical_measurement_performance_claimed": false,
+  "previous_version_backup": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\report-new-20261016\\before-feedback-f1eae0d279f4.hwp",
+  "feedback_and_false_alarm_definitions_included": true
+}

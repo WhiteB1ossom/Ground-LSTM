@@ -1,0 +1,49 @@
+schema_version: 1
+purpose: SERVER_SOFTWARE_EQUIPMENT_REVIEW_NOT_CERTIFIED_DIAGNOSIS
+deployment_target: server
+preprocessing_config: preprocessing_equipment_server.yaml
+model_base_config: model_demo.yaml
+experiments:
+  - {name: lstm32, hidden_units: 32, seed: 42}
+  - {name: lstm64, hidden_units: 64, seed: 42}
+  - {name: lstm128, hidden_units: 128, seed: 42}
+training: {epochs: 50, batch_size: 128, early_stopping_patience: 8}
+selection: {split: validation, metric: f1, size_penalty: false, mcu_gate: false}
+synthetic:
+  seed: 20261015
+  session_seconds: 180
+  replicas_by_split: {train: 3, validation: 1, test: 1}
+  input_voltage_reference: 220
+  zero_response: {enabled: true, target_V: 0, decay_seconds: 0.5, scope: hypothetical_software_response_not_verified_device_transfer_function}
+replay:
+  mode: advisory
+  hardware_actuation_enabled: false
+  minimum_consecutive_detections: 2
+  off_threshold_ratio: 1.0
+  pre_event_seconds: 5
+  post_event_seconds: 2
+  writer_queue_capacity: 64
+  max_active_events: 4
+  max_event_seconds: 30
+  max_saved_events: 1000
+  shutdown_timeout_seconds: 5
+  rules:
+    - {sensor: ground_voltage_a, unit: V_AC, operator: ge, value: 2}
+    - {sensor: ground_voltage_b, unit: V_AC, operator: ge, value: 2}
+    - {sensor: leakage_current, unit: A, operator: ge, value: 0.002}
+    - {sensor: limiter_temp_a, unit: degC, operator: ge, value: 45}
+    - {sensor: limiter_temp_b, unit: degC, operator: ge, value: 45}
+    - {sensor: limiter_temp_c, unit: degC, operator: ge, value: 45}
+    - {sensor: humidity, unit: percent_RH, operator: ge, value: 70}
+  rule_combination: any
+criteria_provenance:
+  values: user_2026_10_15_replaces_earlier_1mA_25degC_60percent
+  comparison_operator: engineering_ge_review_default_user_delegated_not_company_certified
+  temperature_reference: absolute_degC_review_default
+  ambient_25degC: context_reference_not_automatic_degradation_or_lightning_label
+  input_voltage: measured_input_and_configured_reference_difference_no_universal_alarm_limit
+  surge_counter: lightning_or_overvoltage_counts_not_confirmed_lightning_occurrences
+  references:
+    - https://eca3g.com/home/sub.php?menukey=487
+    - https://eca3g.com/home/main.php
+    - https://eca3g.com/home/images/sub/ground_catalogue.pdf

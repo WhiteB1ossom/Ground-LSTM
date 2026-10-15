@@ -1,0 +1,13 @@
+[
+  {
+    "event_id":"synthetic-0003",
+    "event_time":"2026-01-01T00:03:36+00:00",
+    "pre_event_start":"2026-01-01T00:03:31+00:00",
+    "post_event_end":"2026-01-01T00:03:38+00:00",
+    "source":"monitoring",
+    "acquisition_kind":"synthetic",
+    "ground_truth":"UNLABELED",
+    "observed_rows":71,
+    "purpose":"offline_inspection_and_post_event_verification"
+  }
+]

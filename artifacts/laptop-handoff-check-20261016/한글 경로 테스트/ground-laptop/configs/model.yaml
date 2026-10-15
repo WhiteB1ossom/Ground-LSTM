@@ -1,0 +1,37 @@
+schema_version: 1
+status: training_and_evaluation_implemented
+seed: 42
+labeling:
+  mode: binary
+  ground_truth_mapping: null
+  unlabeled_action: stop_training
+  multiclass_semantics_confirmed: false
+model:
+  type: lstm
+  hidden_units: 16
+  num_layers: 1
+  bidirectional: false
+  dropout: 0.0
+  sequence_length: null # use prepared artifact; if set, must match
+training:
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 100 # upper budget, not a promised convergence epoch
+  early_stopping_patience: 10
+  early_stopping_min_delta: 0.0001
+  lr_schedule: {enabled: true, factor: 0.5, patience: 3, min_learning_rate: 0.00001}
+  class_weight: null
+  deterministic: true
+  allow_synthetic_demo: false
+baseline:
+  logistic_max_iter: 1000
+  threshold_rules: [] # optional {sensor, operator: ge/le, value}; company-confirmed values only
+evaluation:
+  threshold_search: validation_scores
+  validation_threshold_candidates: [0.3, 0.4, 0.5, 0.6, 0.7]
+  threshold_objective: recall_then_f1 # or max_f1
+  minimum_recall: 0.9 # evaluation target, not physical sensor threshold
+  latency_repetitions: 20
+input_contract:
+  minimum_context_seconds: 6.4 # initial fast-signal context; verify on validation before final test
+  require_slow_sensor_age: true

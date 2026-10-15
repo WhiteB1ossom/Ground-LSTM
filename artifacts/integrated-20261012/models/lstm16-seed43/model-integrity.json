@@ -1,0 +1,9 @@
+{
+  "files": {
+    "best_model.keras": "1580c4b2c3448aa69695bd4980dd78756a2f582f732eb9ff84b297c94a34e064",
+    "logistic.json": "ff14df3ead4e3bc37386bd60490f84f6b19924112d9cafea3aaa33f03b29c2c9",
+    "scaler.json": "c1ceda926bfa7f16c3f243ae03e4380806810ff0c6ccd9bcb1591375456cad33",
+    "feature_order.json": "6194a64a9549c4baeb313a7c0136e69e29de1759c6acaf28c7c014bbde1cc1fc",
+    "report.json": "f5926cf0d3a150e877f599576ced2a485da3303a450dc3d8f0235e6ea7f2614b"
+  }
+}

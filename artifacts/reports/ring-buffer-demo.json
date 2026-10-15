@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "purpose": "RING_BUFFER_SOFTWARE_DEMO_NO_MODEL_INFERENCE",
+  "dataset_version": "862a950365431be7",
+  "replayed_samples": 3600,
+  "fixture_segments": 6,
+  "buffer_capacity": 66,
+  "final_buffer_size": 66,
+  "overwritten_samples": 3204,
+  "buffer_storage_bytes": 5874,
+  "sequence_workspace_bytes": 144,
+  "tensor_bytes": 1280,
+  "status_counts": {
+    "WARMING_UP": 90,
+    "READY": 882,
+    "WAITING_FOR_STRIDE": 2628
+  },
+  "sequence_shape": [
+    1,
+    16,
+    20
+  ],
+  "oldest_retained_timestamp": "2026-01-01T00:05:53.400000+00:00",
+  "latest_retained_timestamp": "2026-01-01T00:05:59.900000+00:00",
+  "model_inference_performed": false,
+  "hardware_actuation_performed": false,
+  "notes": [
+    "Array payload memory only; not total Python RAM or an MCU deployment estimate.",
+    "Snapshot export is explicit demo inspection, not automatic risk event recording.",
+    "Fixture event boundaries reset context to match offline preparation, not a live detection mechanism."
+  ]
+}

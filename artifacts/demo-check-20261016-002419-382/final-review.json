@@ -1,0 +1,15 @@
+{
+  "protected_originals_unchanged": 98,
+  "changed_files": {
+    "src/realtime/demo.py": "a590cb3fec40fdc1279715150358f762b866389465cd3169f08dea85da57c51e",
+    "src/realtime/demo.html": "7c234086a0953e72ece92f5ffe54467e649abbe5522f611006df672bdb4b92bf",
+    "tests/test_demo.py": "69555b1f5489f23b7c2fecfda55d3b8623c22fb7e34f3c2ae145172512211584",
+    "run-demo.cmd": "f11ec99f4c5f3d456338a60284ca0edcc6687844ab0a23ee962388712a002101",
+    "docs/presentation-demo.md": "ffe83d0fdfae4ae6e29350c4476424c1ce43291b194dfbea8ca16f12f92bc6fb",
+    "README.md": "b63393ef3bf577bdfd91989d5bbdc8e158473f458a9217c51ce1aa010cf57936",
+    "docs/equipment-server-20261015.md": "c9523bd5456205cfaff88b9b75e069a8e68deb77d8f1ef078f2a7114b5c26e6a",
+    "pyproject.toml": "0ee175bdf8cf1f9d1d7682803ad4347828218ceda75542ee11676545d38d78b4"
+  },
+  "browser_visual_qa": "UNAVAILABLE_NO_CONNECTED_BROWSER",
+  "javascript_syntax": "PASS"
+}

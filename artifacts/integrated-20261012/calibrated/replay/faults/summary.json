@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\integration\\integrated-20261012\\faults.synthetic.csv",
+  "model": "lstm",
+  "speed": "max",
+  "synthetic_demo": true,
+  "observations": 6000,
+  "aligned_rows": 5998,
+  "model_version": "lstm64",
+  "decision_thresholds": {
+    "on": 0.31284192204475403,
+    "off": 0.1877051532268524,
+    "consecutive": 1
+  },
+  "status_counts": {
+    "WARMING_UP": 630,
+    "READY": 1118,
+    "WAITING_FOR_STRIDE": 4020,
+    "INVALID_WINDOW": 230
+  },
+  "rejected_observations": [],
+  "rejected_observation_count": 0,
+  "buffer_capacity": 114,
+  "buffer_array_bytes": 14706,
+  "input_tensor_bytes": 7680,
+  "sequence_workspace_bytes": 576,
+  "elapsed_host_seconds": 208.42228969999996,
+  "inference_host_ms": {
+    "median": 171.49605,
+    "p95": 272.1634999999998,
+    "sample_limit": 4096
+  },
+  "recorder": {
+    "saved_events": 0,
+    "dropped_events": 0,
+    "writer_errors": [],
+    "writer_error_count": 0,
+    "queue_capacity": 64,
+    "history_capacity": 51
+  },
+  "evaluation": {
+    "scope": "timestamp_replay_not_mcu_or_physical_validation",
+    "window": null,
+    "total_seconds": 599.8000000000001,
+    "normal_seconds": 0.0,
+    "normal_valid_seconds": 0.0,
+    "available_seconds": 442.20000000000005,
+    "coverage": 0.737245748582861,
+    "risk_intervals": 0,
+    "detected_risk_intervals": 0,
+    "missed_risk_intervals": 0,
+    "incompletely_covered_risk_intervals": 0,
+    "missed_fully_covered_risk_intervals": 0,
+    "alarm_episodes": 0,
+    "false_alarm_episodes": 0,
+    "false_alarm_per_normal_valid_hour": null,
+    "normal_alarm_seconds": 0.0,
+    "normal_alarm_seconds_including_unavailable": 0.0,
+    "normal_alarm_fraction": null,
+    "detection_delays_seconds": [],
+    "delay_sample_limit": 1024,
+    "median_detection_delay_seconds": null,
+    "unclassified_rows": 5998,
+    "matching_rule": "Available active alarm overlap detects a risk interval; false episodes have covered normal time and no risk overlap."
+  },
+  "mcu_verified": false,
+  "hardware_actuation_performed": false
+}

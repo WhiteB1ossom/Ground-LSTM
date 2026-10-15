@@ -1,0 +1,9 @@
+{
+  "scope": "New timeline chart only; original user deck unchanged",
+  "source": "content.json actual replay sensor values",
+  "source_sha256": "c9186bc9d82dd10b4232faa910933a7099779eb034eaaab3d71ef06aa25e3723",
+  "chart_cache_matches_source": true,
+  "numeric_cells": 1204,
+  "worksheet": "Data",
+  "original_user_formulas_replaced": false
+}

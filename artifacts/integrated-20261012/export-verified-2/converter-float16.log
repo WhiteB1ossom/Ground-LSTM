@@ -1,0 +1,17 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791774757.558631   86636 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791774763.335188   86636 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791774768.895038   86636 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+W0000 00:00:1791774769.827522   86636 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1791774769.827569   86636 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1791774769.828416   86636 reader.cc:83] Reading SavedModel from: C:\Users\bloss\AppData\Local\Temp\lightning-export-q1uv178z\saved_model
+I0000 00:00:1791774769.831010   86636 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1791774769.831046   86636 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\bloss\AppData\Local\Temp\lightning-export-q1uv178z\saved_model
+I0000 00:00:1791774769.868647   86636 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1791774769.870334   86636 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1791774769.957547   86636 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\bloss\AppData\Local\Temp\lightning-export-q1uv178z\saved_model
+I0000 00:00:1791774770.016039   86636 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 187648 microseconds.
+I0000 00:00:1791774770.143103   86636 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1791774770.543818   86636 flatbuffer_export.cc:4302] Estimated count of arithmetic ops: 4.403 M  ops, equivalently 2.202 M  MACs

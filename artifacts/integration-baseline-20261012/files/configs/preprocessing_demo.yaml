@@ -1,0 +1,18 @@
+schema_version: 1
+extends: preprocessing.yaml
+sensors_config: sensors_demo.yaml
+input:
+  patterns: [phase2-demo.synthetic.csv]
+  acquisition_kind: synthetic
+pipeline:
+  alignment_period_seconds: 0.1
+  # These are SOFTWARE TEST values; never copy into a deployment profile.
+  split:
+    mode: event
+    purge_gap_seconds: 0
+  windows:
+    sequence_length: 16
+    stride: 4
+  events:
+    pre_event_seconds: 5
+    post_event_seconds: 2

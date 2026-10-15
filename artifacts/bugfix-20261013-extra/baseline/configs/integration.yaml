@@ -1,0 +1,27 @@
+schema_version: 1
+purpose: SOFTWARE_INTEGRATION_NOT_PHYSICAL_PERFORMANCE
+preprocessing_config: preprocessing_integration_demo.yaml
+model_base_config: model_demo.yaml
+model_overrides_config: model_integration_demo.yaml
+experiments:
+  - {name: lstm16, hidden_units: 16, seed: 42}
+  - {name: lstm32, hidden_units: 32, seed: 42}
+  - {name: lstm64, hidden_units: 64, seed: 42}
+  - {name: lstm16-seed43, hidden_units: 16, seed: 43}
+replay:
+  mode: advisory
+  hardware_actuation_enabled: false
+  minimum_consecutive_detections: 2
+  off_threshold_ratio: 0.8
+  pre_event_seconds: 5
+  post_event_seconds: 2
+  writer_queue_capacity: 64
+  max_active_events: 4
+  max_event_seconds: 30
+  max_saved_events: 1000
+  input_timeout_seconds: 1.0
+  timeline_segment_bytes: 33554432
+  timeline_max_segments: 8
+  rules: []
+  rule_combination: any
+target_mcu_config: target_mcu.yaml

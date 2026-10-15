@@ -1,0 +1,192 @@
+{
+  "selection_split": "validation",
+  "selected": "lstm32",
+  "size_penalty": false,
+  "mcu_feasibility_gate": false,
+  "candidates": [
+    {
+      "name": "lstm32",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\degradation\\models\\lstm32",
+      "validation": {
+        "samples": 2958,
+        "accuracy": 0.9996619337390128,
+        "precision": 0.9993311036789297,
+        "recall": 1.0,
+        "f1": 0.9996654399464704,
+        "risk_pr_auc_trapezoidal": 0.999999103956904,
+        "risk_average_precision": 0.9999991042567845,
+        "false_negatives": 0,
+        "false_positives": 1,
+        "confusion_matrix": [
+          [
+            1463,
+            1
+          ],
+          [
+            0,
+            1494
+          ]
+        ],
+        "risk_false_negative_rate": 0.0,
+        "risk_false_positive_rate": 0.0006830601092896175,
+        "risk_prevalence": 0.5050709939148073,
+        "predicted_risk_fraction": 0.5054090601757945,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1464,
+            "false_negatives": 1,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 1494,
+            "false_negatives": 0,
+            "false_positives": 1
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 12,
+          "detected_in_positive_windows": 12,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 5,
+          "normal_groups_with_false_alarm": 1,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "parameters": 9249,
+      "epochs_completed": 50,
+      "best_epoch": 47
+    },
+    {
+      "name": "lstm64",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\degradation\\models\\lstm64",
+      "validation": {
+        "samples": 2958,
+        "accuracy": 0.9976335361730899,
+        "precision": 1.0,
+        "recall": 0.9953145917001339,
+        "f1": 0.9976517946997652,
+        "risk_pr_auc_trapezoidal": 0.9994058810282562,
+        "risk_average_precision": 0.9994060443125498,
+        "false_negatives": 7,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            1464,
+            0
+          ],
+          [
+            7,
+            1487
+          ]
+        ],
+        "risk_false_negative_rate": 0.004685408299866131,
+        "risk_false_positive_rate": 0.0,
+        "risk_prevalence": 0.5050709939148073,
+        "predicted_risk_fraction": 0.5027045300878973,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1464,
+            "false_negatives": 0,
+            "false_positives": 7
+          },
+          {
+            "class_id": 1,
+            "support": 1494,
+            "false_negatives": 7,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.28704118728637695,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 12,
+          "detected_in_positive_windows": 12,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 5,
+          "normal_groups_with_false_alarm": 0,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "parameters": 26689,
+      "epochs_completed": 11,
+      "best_epoch": 4
+    },
+    {
+      "name": "lstm128",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\degradation\\models\\lstm128",
+      "validation": {
+        "samples": 2958,
+        "accuracy": 0.9969574036511156,
+        "precision": 0.9953302201467645,
+        "recall": 0.998661311914324,
+        "f1": 0.9969929836284664,
+        "risk_pr_auc_trapezoidal": 0.9999745189166673,
+        "risk_average_precision": 0.9999745274258123,
+        "false_negatives": 2,
+        "false_positives": 7,
+        "confusion_matrix": [
+          [
+            1457,
+            7
+          ],
+          [
+            2,
+            1492
+          ]
+        ],
+        "risk_false_negative_rate": 0.0013386880856760374,
+        "risk_false_positive_rate": 0.0047814207650273225,
+        "risk_prevalence": 0.5050709939148073,
+        "predicted_risk_fraction": 0.506761325219743,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1464,
+            "false_negatives": 7,
+            "false_positives": 2
+          },
+          {
+            "class_id": 1,
+            "support": 1494,
+            "false_negatives": 2,
+            "false_positives": 7
+          }
+        ],
+        "threshold": 0.03978462144732475,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 12,
+          "detected_in_positive_windows": 12,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 5,
+          "normal_groups_with_false_alarm": 3,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "parameters": 86145,
+      "epochs_completed": 12,
+      "best_epoch": 4
+    }
+  ],
+  "test_used_for_ranking": false
+}

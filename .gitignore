@@ -1,16 +1,3 @@
-.venv/
-.venv-ml/
-__pycache__/
-.pytest_cache/
-*.egg-info/
-data/raw/*
-!data/raw/.gitkeep
-data/interim/*
-!data/interim/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-data/events/*
-!data/events/.gitkeep
-artifacts/**
-!artifacts/**/
-!artifacts/**/.gitkeep
+# master is an explicitly requested full project snapshot.
+# Environments, caches, data and artifacts are intentionally tracked.
+# Git administrative metadata (.git) is never project content.

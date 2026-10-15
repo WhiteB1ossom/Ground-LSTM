@@ -1,0 +1,14 @@
+schema_version: 1
+status: ring_buffer_and_sequence_builder_implemented
+mode: advisory
+decision:
+  risk_on_threshold: null
+  risk_off_threshold: null
+  minimum_consecutive_detections: null
+buffer:
+  sequence_length: null
+  sampling_period_seconds: null
+  stride: null
+  pre_event_seconds: null
+  post_event_seconds: null
+hardware_actuation_enabled: false

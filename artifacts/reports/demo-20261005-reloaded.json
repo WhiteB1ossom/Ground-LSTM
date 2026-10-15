@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "experiment_directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\models\\demo-20261005",
+  "dataset_hashes": {
+    "manifest.json": "35f76e5db11ad9f3805b4cc6d40c5f76b671b96b2de0d8460dbc111b51b52e6e",
+    "scaler.json": "5dba0b88665d23d55656c4831caa617cb57a9d21a0a2e54ce1910dd92239653a",
+    "feature_order.json": "cf82a9aec67414e0041d94072ec91b75615af624a1bfbc14044411a1440d758d",
+    "train.npz": "a8149d76c0072a7afd879016e9b7b0db298b5f2b4952d1bcbb6dc2c353b8dd1a",
+    "validation.npz": "00887f471f738f3372bcf2c947dd3e5ab09bc8a42a900546a040cbee7c886656",
+    "test.npz": "65b93f43033b03bdf619f4707000a4ab1684b090d5851eae89e0096fadba4dfd"
+  },
+  "synthetic_demo": true,
+  "thresholds_retuned": false,
+  "models": {
+    "logistic": {
+      "status": "evaluated",
+      "threshold_selection": {
+        "selected_threshold": 0.5,
+        "selection_split": "validation",
+        "objective": "recall_then_f1",
+        "minimum_recall": 0.9,
+        "recall_target_met": true,
+        "reason": "Highest validation F1 among thresholds meeting the recall target",
+        "candidates": [
+          {
+            "samples": 147,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 1.0,
+            "risk_average_precision": 1.0,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                102,
+                0
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.3,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 1.0,
+            "risk_average_precision": 1.0,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                102,
+                0
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.4,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 1.0,
+            "risk_average_precision": 1.0,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                102,
+                0
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.5,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 1.0,
+            "risk_average_precision": 1.0,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                102,
+                0
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.6,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "risk_pr_auc_trapezoidal": 1.0,
+            "risk_average_precision": 1.0,
+            "false_negatives": 0,
+            "false_positives": 0,
+            "confusion_matrix": [
+              [
+                102,
+                0
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 0,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 0,
+                "false_positives": 0
+              }
+            ],
+            "threshold": 0.7,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          }
+        ]
+      },
+      "coverage": {
+        "validation": 1.0,
+        "test": 1.0
+      },
+      "validation": {
+        "samples": 147,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "risk_pr_auc_trapezoidal": 1.0,
+        "risk_average_precision": 1.0,
+        "false_negatives": 0,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            102,
+            0
+          ],
+          [
+            0,
+            45
+          ]
+        ],
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 102,
+            "false_negatives": 0,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 45,
+            "false_negatives": 0,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary"
+      },
+      "test": {
+        "samples": 294,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "risk_pr_auc_trapezoidal": 1.0,
+        "risk_average_precision": 1.0,
+        "false_negatives": 0,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            204,
+            0
+          ],
+          [
+            0,
+            90
+          ]
+        ],
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 204,
+            "false_negatives": 0,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 90,
+            "false_negatives": 0,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary"
+      }
+    },
+    "threshold_rule": {
+      "status": "disabled",
+      "reason": "No confirmed sensor thresholds supplied"
+    },
+    "lstm": {
+      "status": "evaluated",
+      "threshold_selection": {
+        "selected_threshold": 0.5,
+        "selection_split": "validation",
+        "objective": "recall_then_f1",
+        "minimum_recall": 0.9,
+        "recall_target_met": true,
+        "reason": "Highest validation F1 among thresholds meeting the recall target",
+        "candidates": [
+          {
+            "samples": 147,
+            "accuracy": 0.7074829931972789,
+            "precision": 0.5113636363636364,
+            "recall": 1.0,
+            "f1": 0.6766917293233082,
+            "risk_pr_auc_trapezoidal": 0.9747038308979833,
+            "risk_average_precision": 0.9751753819104246,
+            "false_negatives": 0,
+            "false_positives": 43,
+            "confusion_matrix": [
+              [
+                59,
+                43
+              ],
+              [
+                0,
+                45
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 43,
+                "false_positives": 0
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 0,
+                "false_positives": 43
+              }
+            ],
+            "threshold": 0.3,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 0.9727891156462585,
+            "precision": 0.9361702127659575,
+            "recall": 0.9777777777777777,
+            "f1": 0.9565217391304348,
+            "risk_pr_auc_trapezoidal": 0.9747038308979833,
+            "risk_average_precision": 0.9751753819104246,
+            "false_negatives": 1,
+            "false_positives": 3,
+            "confusion_matrix": [
+              [
+                99,
+                3
+              ],
+              [
+                1,
+                44
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 3,
+                "false_positives": 1
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 1,
+                "false_positives": 3
+              }
+            ],
+            "threshold": 0.4,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 0.9795918367346939,
+            "precision": 0.9565217391304348,
+            "recall": 0.9777777777777777,
+            "f1": 0.967032967032967,
+            "risk_pr_auc_trapezoidal": 0.9747038308979833,
+            "risk_average_precision": 0.9751753819104246,
+            "false_negatives": 1,
+            "false_positives": 2,
+            "confusion_matrix": [
+              [
+                100,
+                2
+              ],
+              [
+                1,
+                44
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 2,
+                "false_positives": 1
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 1,
+                "false_positives": 2
+              }
+            ],
+            "threshold": 0.5,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 0.9795918367346939,
+            "precision": 0.9772727272727273,
+            "recall": 0.9555555555555556,
+            "f1": 0.9662921348314607,
+            "risk_pr_auc_trapezoidal": 0.9747038308979833,
+            "risk_average_precision": 0.9751753819104246,
+            "false_negatives": 2,
+            "false_positives": 1,
+            "confusion_matrix": [
+              [
+                101,
+                1
+              ],
+              [
+                2,
+                43
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 1,
+                "false_positives": 2
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 2,
+                "false_positives": 1
+              }
+            ],
+            "threshold": 0.6,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          },
+          {
+            "samples": 147,
+            "accuracy": 0.891156462585034,
+            "precision": 0.967741935483871,
+            "recall": 0.6666666666666666,
+            "f1": 0.7894736842105263,
+            "risk_pr_auc_trapezoidal": 0.9747038308979833,
+            "risk_average_precision": 0.9751753819104246,
+            "false_negatives": 15,
+            "false_positives": 1,
+            "confusion_matrix": [
+              [
+                101,
+                1
+              ],
+              [
+                15,
+                30
+              ]
+            ],
+            "per_class": [
+              {
+                "class_id": 0,
+                "support": 102,
+                "false_negatives": 1,
+                "false_positives": 15
+              },
+              {
+                "class_id": 1,
+                "support": 45,
+                "false_negatives": 15,
+                "false_positives": 1
+              }
+            ],
+            "threshold": 0.7,
+            "scope": "window_level_not_event_level",
+            "averaging": "binary"
+          }
+        ]
+      },
+      "coverage": {
+        "validation": 1.0,
+        "test": 1.0
+      },
+      "validation": {
+        "samples": 147,
+        "accuracy": 0.9795918367346939,
+        "precision": 0.9565217391304348,
+        "recall": 0.9777777777777777,
+        "f1": 0.967032967032967,
+        "risk_pr_auc_trapezoidal": 0.9747038308979833,
+        "risk_average_precision": 0.9751753819104246,
+        "false_negatives": 1,
+        "false_positives": 2,
+        "confusion_matrix": [
+          [
+            100,
+            2
+          ],
+          [
+            1,
+            44
+          ]
+        ],
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 102,
+            "false_negatives": 2,
+            "false_positives": 1
+          },
+          {
+            "class_id": 1,
+            "support": 45,
+            "false_negatives": 1,
+            "false_positives": 2
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary"
+      },
+      "test": {
+        "samples": 294,
+        "accuracy": 0.6938775510204082,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "risk_pr_auc_trapezoidal": 0.8638997302376411,
+        "risk_average_precision": 0.8695510113569825,
+        "false_negatives": 0,
+        "false_positives": 90,
+        "confusion_matrix": [
+          [
+            114,
+            90
+          ],
+          [
+            0,
+            90
+          ]
+        ],
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 204,
+            "false_negatives": 90,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 90,
+            "false_negatives": 0,
+            "false_positives": 90
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+replay:
+  hardware_actuation_enabled: false
+  max_active_events: 4
+  max_event_seconds: 30
+  max_saved_events: 1000
+  minimum_consecutive_detections: 2
+  mode: advisory
+  off_threshold_ratio: 0.8
+  post_event_seconds: 2
+  pre_event_seconds: 5
+  risk_off_threshold: 0.1741286814212799
+  risk_on_threshold: 0.1741286814212799
+  rule_combination: any
+  rules: []
+  timeline_max_segments: 16
+  timeline_segment_bytes: 2097152
+  writer_queue_capacity: 64

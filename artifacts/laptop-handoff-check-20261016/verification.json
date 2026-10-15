@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "archive": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\output\\transfer\\ground-laptop-20261016-010327-066824.zip",
+  "bytes": 2619864,
+  "sha256": "b692c3b39693e959b676283d2d916c0f57b043ec4f5c987eeab558720dc82d58",
+  "verified_transfer_files": 180,
+  "source_origins": [
+    "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\laptop-handoff-check-20261016\\한글 경로 테스트\\ground-laptop\\src\\__init__.py",
+    "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\laptop-handoff-check-20261016\\한글 경로 테스트\\ground-laptop\\scripts\\__init__.py"
+  ],
+  "extracted_project": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\laptop-handoff-check-20261016\\한글 경로 테스트\\ground-laptop",
+  "runtime_report": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\laptop-handoff-check-20261016\\한글 경로 테스트\\ground-laptop\\artifacts\\laptop-check\\20261016-010407-132793-f20859\\laptop-verification.json",
+  "observations": 1800,
+  "inferences": {
+    "degradation": 174,
+    "surge": 174
+  },
+  "protected_originals_unchanged": 98,
+  "tests_passed": 345,
+  "fresh_environment_install_on_laptop": "PENDING_TARGET_PC",
+  "browser_visual_qa": "NOT_PERFORMED"
+}

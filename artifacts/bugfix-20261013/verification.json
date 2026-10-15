@@ -1,0 +1,44 @@
+{
+  "status": "SUCCESS",
+  "tests": 196,
+  "model_integrity_files_verified": 25,
+  "selected_decision_settings_unchanged": true,
+  "original_ppt_unchanged": true,
+  "cli": {
+    "status": "SUCCESS",
+    "typed_parquet_unit": "us",
+    "aligned_rows": 7200,
+    "max_score_error_against_saved_keras": 1.1920928955078125e-07,
+    "retained_segments": 7,
+    "timeline": {
+      "segment_bytes": 2097152,
+      "max_segments": 16,
+      "maximum_retained_bytes": 33554432,
+      "files": [
+        "timeline.jsonl",
+        "timeline.000001.jsonl",
+        "timeline.000002.jsonl",
+        "timeline.000003.jsonl",
+        "timeline.000004.jsonl",
+        "timeline.000005.jsonl",
+        "timeline.000006.jsonl"
+      ],
+      "retained_records": 7200,
+      "retained_payload_bytes": 12668817,
+      "written_records": 7200,
+      "evicted_records": 0,
+      "dropped_records": 0,
+      "retention_truncated": false,
+      "error_count": 0,
+      "errors": [],
+      "disabled": false
+    },
+    "cli_exit_codes": {
+      "success": 0,
+      "degraded": 1,
+      "configuration_error": 2
+    },
+    "model_retrained": false,
+    "mcu_verified": false
+  }
+}

@@ -1,0 +1,6 @@
+schema_version: 1
+extends: preprocessing.yaml
+input:
+  directory: ../data/raw/lab_experiment
+  acquisition_kind: lab_experiment
+# Laboratory acquisition periods/units must be confirmed independently.

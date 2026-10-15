@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "status": "SUCCESS",
+  "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\bugfix-20261013\\verification-2\\inputs\\heldout.parquet",
+  "model": "tflite",
+  "speed": "max",
+  "synthetic_demo": true,
+  "observations": 7200,
+  "aligned_rows": 7200,
+  "model_version": "lstm16-fast-only",
+  "decision_thresholds": {
+    "on": 0.1741286814212799,
+    "off": 0.1741286814212799,
+    "consecutive": 2
+  },
+  "status_counts": {
+    "WARMING_UP": 756,
+    "READY": 1620,
+    "WAITING_FOR_STRIDE": 4824
+  },
+  "rejected_observations": [],
+  "rejected_observation_count": 0,
+  "buffer_capacity": 114,
+  "buffer_array_bytes": 7866,
+  "input_tensor_bytes": 3840,
+  "sequence_workspace_bytes": 576,
+  "elapsed_host_seconds": 5.836460499995155,
+  "inference_host_ms": {
+    "median": 0.24409999999999998,
+    "p95": 0.5114299999999996,
+    "sample_limit": 4096
+  },
+  "recorder": {
+    "saved_events": 8,
+    "dropped_events": 0,
+    "writer_errors": [],
+    "writer_error_count": 0,
+    "max_saved_events": 1000,
+    "storage_disabled": false,
+    "cleanup_error_count": 0,
+    "accepted_raw_observations": 7200,
+    "raw_history_capacity": 1024,
+    "max_raw_observations_per_event": 4096,
+    "raw_history_dropped": 0,
+    "raw_event_dropped": 0,
+    "queue_capacity": 64,
+    "history_capacity": 51
+  },
+  "timeline": {
+    "segment_bytes": 33554432,
+    "max_segments": 8,
+    "maximum_retained_bytes": 268435456,
+    "files": [
+      "timeline.jsonl"
+    ],
+    "retained_records": 7200,
+    "retained_payload_bytes": 12668849,
+    "written_records": 7200,
+    "evicted_records": 0,
+    "dropped_records": 0,
+    "retention_truncated": false,
+    "error_count": 0,
+    "errors": [],
+    "disabled": false
+  },
+  "inference_failure_count": 0,
+  "preprocessing_failure_count": 0,
+  "evaluation": {
+    "scope": "timestamp_replay_not_mcu_or_physical_validation",
+    "window": {
+      "samples": 1620,
+      "confusion_matrix": [
+        [
+          1437,
+          18
+        ],
+        [
+          1,
+          164
+        ]
+      ],
+      "false_positives": 18,
+      "false_negatives": 1,
+      "precision": 0.9010989010989011,
+      "recall": 0.9939393939393939,
+      "f1": 0.9452449567723342,
+      "accuracy": 0.9882716049382716,
+      "risk_false_positive_rate": 0.012371134020618556,
+      "threshold": 0.1741286814212799,
+      "scope": "window_level"
+    },
+    "total_seconds": 720.0,
+    "normal_seconds": 654.7,
+    "normal_valid_seconds": 579.1,
+    "available_seconds": 644.4000000000001,
+    "coverage": 0.895,
+    "risk_intervals": 8,
+    "detected_risk_intervals": 8,
+    "missed_risk_intervals": 0,
+    "incompletely_covered_risk_intervals": 0,
+    "missed_fully_covered_risk_intervals": 0,
+    "alarm_episodes": 8,
+    "false_alarm_episodes": 0,
+    "unmatched_alarm_episodes": 0,
+    "false_alarm_per_normal_valid_hour": 0.0,
+    "normal_alarm_seconds": 7.5,
+    "normal_alarm_seconds_including_unavailable": 7.5,
+    "normal_alarm_fraction": 0.012951131065446382,
+    "detection_delays_seconds": [
+      0.4,
+      0.8,
+      0.5,
+      0.5,
+      0.4,
+      0.5,
+      0.5,
+      0.4
+    ],
+    "delay_sample_limit": 1024,
+    "median_detection_delay_seconds": 0.5,
+    "unclassified_rows": 0,
+    "rule_condition_by_truth_by_prediction": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ],
+    "rule_unknown_scored_windows": 1620,
+    "rule_cube_axes": [
+      "condition_met:false/true",
+      "truth:normal/risk",
+      "prediction:normal/risk"
+    ],
+    "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+  },
+  "mcu_verified": false,
+  "hardware_actuation_performed": false
+}

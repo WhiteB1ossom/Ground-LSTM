@@ -1,0 +1,13 @@
+{
+  "status": "SUCCESS",
+  "compiler": "MSVC C++17",
+  "host_golden_vectors": 140,
+  "invalid_configuration_cases": 12,
+  "invalid_configuration_decisions": 60,
+  "valid_configuration_cases": 5,
+  "python_decision_parity_steps": 90,
+  "updated_delivery_directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\fixes-20261015\\resources",
+  "delivery_header_matches_source": true,
+  "model_bytes": 17360,
+  "mcu_verified": false
+}

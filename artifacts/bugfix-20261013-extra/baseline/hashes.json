@@ -1,0 +1,10 @@
+{
+  "src/realtime/stream.py": "8628a7fd57ad381cab14f0ac8a91e06bed63c6aadba824bd55dc918723138a30",
+  "src/realtime/recorder.py": "3f01f0c01a78a8c03554591cfe3aaf088d6b2299021801bc67de07a85b6cfd59",
+  "src/realtime/inference.py": "1c12e9291e7598b1fb584b567bf8b314d9053518f22c2dd60af22e1129e00c01",
+  "src/evaluation/stream_metrics.py": "fe2f2beb17a1d345e955793a35c4cb5cbf424a841026f8dae3181906ef97abfd",
+  "src/realtime/replay.py": "03f1168a08e3c13a95bf866099d7ccc7f473fd8bc3785aac57c622aafd48e800",
+  "configs/integration.yaml": "050d29404142508f69661fbb1f83f0a54483bdc87df06515449bab2c806b1ab4",
+  "README.md": "309adde97008c0f5173bcbb4f2cd2323015ed5832441bb6c03f1f05796d227cd",
+  "docs/integration-usage.md": "f0da01fbd3832a6d5967cd157a0ad1c2c663517d7973910c62f35a9373a147b0"
+}

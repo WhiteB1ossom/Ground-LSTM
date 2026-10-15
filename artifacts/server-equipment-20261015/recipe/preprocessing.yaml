@@ -1,0 +1,87 @@
+future_pipeline:
+  alignment_period_seconds: null
+  causal: true
+  features:
+  - current_value
+  post_event_seconds: null
+  pre_event_seconds: null
+  purge_gap_seconds: null
+  scaler: standard
+  sequence_length: null
+  split: event_or_chronological
+  stale_action: missing_indicator
+  stride: null
+input:
+  acquisition_kind: synthetic
+  directory: "C:\\Users\\bloss\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uCDE8\uC5C5\\\
+    \uD504\uB85C\uC81D\uD2B8\\data\\raw\\equipment-server"
+  patterns:
+  - training.synthetic.csv
+  source: monitoring
+pipeline:
+  alignment_period_seconds: 0.1
+  equipment_features:
+    ambient_reference_degC: 25
+    ambient_sensor: ambient_temp
+    counter_sensor: lightning_sensor
+    counter_window_seconds: 10
+    input_voltage_reference: 220
+    input_voltage_sensor: input_voltage
+    limiter_sensors:
+    - limiter_temp_a
+    - limiter_temp_b
+    - limiter_temp_c
+    response_sensors:
+    - ground_voltage_a
+    - ground_voltage_b
+    response_window_seconds: 10
+  events:
+    post_event_seconds: 2
+    pre_event_seconds: 5
+  features:
+  - current_value
+  ground_voltage_difference: false
+  include_age_features: true
+  include_missing_indicators: true
+  labeling:
+    mapping:
+      normal: 0
+      risk: 1
+    mode: binary
+  output_directory: "C:\\Users\\bloss\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uCDE8\
+    \uC5C5\\\uD504\uB85C\uC81D\uD2B8\\data\\processed"
+  rolling_window_steps: null
+  scaler: standard
+  scaler_directory: "C:\\Users\\bloss\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uCDE8\
+    \uC5C5\\\uD504\uB85C\uC81D\uD2B8\\artifacts\\scaler"
+  segment_policy: acquisition
+  split:
+    mode: event
+    purge_gap_seconds: 0
+    ratios:
+    - 0.6
+    - 0.2
+    - 0.2
+  stale_action: missing_indicator
+  windows:
+    allow_event_crossing: true
+    label_horizon_seconds: 0
+    sequence_length: 64
+    stride: 10
+quality:
+  flatline_seconds: null
+  healthy_communication_status:
+  - OK
+  healthy_sensor_status:
+  - OK
+  sampling_relative_tolerance: 0.2
+report:
+  directory: "C:\\Users\\bloss\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uCDE8\uC5C5\\\
+    \uD504\uB85C\uC81D\uD2B8\\artifacts\\reports"
+schema_version: 1
+sensors_config: "C:\\Users\\bloss\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uCDE8\uC5C5\
+  \\\uD504\uB85C\uC81D\uD2B8\\configs\\sensors_equipment_server.yaml"
+timestamp:
+  naive_policy: reject
+  naive_timezone: null
+  output_timezone: UTC

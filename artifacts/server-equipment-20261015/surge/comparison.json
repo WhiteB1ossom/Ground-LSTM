@@ -1,0 +1,192 @@
+{
+  "selection_split": "validation",
+  "selected": "lstm32",
+  "size_penalty": false,
+  "mcu_feasibility_gate": false,
+  "candidates": [
+    {
+      "name": "lstm32",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\surge\\models\\lstm32",
+      "validation": {
+        "samples": 2958,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "risk_pr_auc_trapezoidal": 0.9999999999999998,
+        "risk_average_precision": 0.9999999999999998,
+        "false_negatives": 0,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            2868,
+            0
+          ],
+          [
+            0,
+            90
+          ]
+        ],
+        "risk_false_negative_rate": 0.0,
+        "risk_false_positive_rate": 0.0,
+        "risk_prevalence": 0.030425963488843813,
+        "predicted_risk_fraction": 0.030425963488843813,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 2868,
+            "false_negatives": 0,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 90,
+            "false_negatives": 0,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 3,
+          "detected_in_positive_windows": 3,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 14,
+          "normal_groups_with_false_alarm": 0,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "parameters": 9249,
+      "epochs_completed": 49,
+      "best_epoch": 49
+    },
+    {
+      "name": "lstm64",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\surge\\models\\lstm64",
+      "validation": {
+        "samples": 2958,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "risk_pr_auc_trapezoidal": 0.9999999999999998,
+        "risk_average_precision": 0.9999999999999998,
+        "false_negatives": 0,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            2868,
+            0
+          ],
+          [
+            0,
+            90
+          ]
+        ],
+        "risk_false_negative_rate": 0.0,
+        "risk_false_positive_rate": 0.0,
+        "risk_prevalence": 0.030425963488843813,
+        "predicted_risk_fraction": 0.030425963488843813,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 2868,
+            "false_negatives": 0,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 90,
+            "false_negatives": 0,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 3,
+          "detected_in_positive_windows": 3,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 14,
+          "normal_groups_with_false_alarm": 0,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "parameters": 26689,
+      "epochs_completed": 42,
+      "best_epoch": 42
+    },
+    {
+      "name": "lstm128",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\server-equipment-20261015\\surge\\models\\lstm128",
+      "validation": {
+        "samples": 2958,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "risk_pr_auc_trapezoidal": 0.9999999999999998,
+        "risk_average_precision": 0.9999999999999998,
+        "false_negatives": 0,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            2868,
+            0
+          ],
+          [
+            0,
+            90
+          ]
+        ],
+        "risk_false_negative_rate": 0.0,
+        "risk_false_positive_rate": 0.0,
+        "risk_prevalence": 0.030425963488843813,
+        "predicted_risk_fraction": 0.030425963488843813,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 2868,
+            "false_negatives": 0,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 90,
+            "false_negatives": 0,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 3,
+          "detected_in_positive_windows": 3,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 14,
+          "normal_groups_with_false_alarm": 0,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "parameters": 86145,
+      "epochs_completed": 27,
+      "best_epoch": 27
+    }
+  ],
+  "test_used_for_ranking": false
+}

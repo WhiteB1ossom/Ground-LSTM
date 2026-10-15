@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "feature_order": [
+    "ground_voltage_a__current_value",
+    "ground_voltage_b__current_value",
+    "leakage_current__current_value",
+    "input_voltage__current_value",
+    "lightning_sensor__current_value",
+    "ground_voltage_a__missing",
+    "ground_voltage_b__missing",
+    "leakage_current__missing",
+    "input_voltage__missing",
+    "lightning_sensor__missing",
+    "ground_voltage_a__age_seconds",
+    "ground_voltage_b__age_seconds",
+    "leakage_current__age_seconds",
+    "input_voltage__age_seconds",
+    "lightning_sensor__age_seconds"
+  ],
+  "sequence_length": 64,
+  "alignment_period_seconds": 0.1
+}

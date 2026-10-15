@@ -1,0 +1,34 @@
+﻿[
+    {
+        "sha256":  "91F6D1B66433C1FFC7ABF7A3E1B02F10FA724EC0DF83C668F3AF250BFE37C2B5",
+        "file":  "src/realtime/stream.py"
+    },
+    {
+        "sha256":  "A05095C5F4C0E0BDFD0B1047E89691CF798D4F9E65A5C92C267ABC952D3CCF0D",
+        "file":  "src/realtime/replay.py"
+    },
+    {
+        "sha256":  "6767661AA45D19C5B393817727304814AF6654F3010C7F25C3ECD4F0475A2CBD",
+        "file":  "src/realtime/decision.py"
+    },
+    {
+        "sha256":  "C264B3F13BBC3090B519D551ECC7539748891F4FFB353F9FD3AE186929E69503",
+        "file":  "configs/integration.yaml"
+    },
+    {
+        "sha256":  "92C341D1521B829B3869471D7D2DF243CA174D36EF15839975FBC602E746C622",
+        "file":  "scripts/verify_integration_run.py"
+    },
+    {
+        "sha256":  "A9FB677F284AA7487A7E5879630391778DF0CADDBCD89FC9331047D140158CFE",
+        "file":  "scripts/build_integration_report.py"
+    },
+    {
+        "sha256":  "8CCDC077ADCA8063141F46981A4E9CFA1A640F65E02AC127FA4753C68C572D6E",
+        "file":  "README.md"
+    },
+    {
+        "sha256":  "74D35CBF080F8B3061BDAF481ABC3F50473CDF31323A6DAE65D91E67A4DB1DEC",
+        "file":  "docs/integration-usage.md"
+    }
+]

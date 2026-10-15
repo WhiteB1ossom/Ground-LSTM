@@ -1,0 +1,62 @@
+{
+  "phase": 2,
+  "date": "2026-10-03",
+  "python": "3.14.3",
+  "scikit_learn": "1.9.1",
+  "tests_passed": 81,
+  "tests_failed": 0,
+  "compileall": "passed",
+  "pip_check": "passed",
+  "output_directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\processed\\862a950365431be7",
+  "dataset_version": "862a950365431be7",
+  "implementation_sha256": "165050dc5f0c069e45e41b40dda1974b276aa1183083ce988f4633ad6e32284e",
+  "inputs": [
+    {
+      "path": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\raw\\phase2-demo.synthetic.csv",
+      "sha256": "bcc6651684e039d87057ae5f52f5372cb409971e5b2c3c039c3be8c494c06577",
+      "rows": 3600,
+      "source": "monitoring",
+      "acquisition_kind": "synthetic"
+    }
+  ],
+  "windows": {
+    "train": {
+      "shape": [
+        441,
+        16,
+        20
+      ],
+      "event_ids": [
+        "synthetic-0000",
+        "synthetic-0001",
+        "synthetic-0002"
+      ],
+      "unlabeled_targets": 441
+    },
+    "validation": {
+      "shape": [
+        147,
+        16,
+        20
+      ],
+      "event_ids": [
+        "synthetic-0003"
+      ],
+      "unlabeled_targets": 147
+    },
+    "test": {
+      "shape": [
+        294,
+        16,
+        20
+      ],
+      "event_ids": [
+        "synthetic-0004",
+        "synthetic-0005"
+      ],
+      "unlabeled_targets": 294
+    }
+  },
+  "label_status": "UNLABELED",
+  "supervised_training_ready": false
+}

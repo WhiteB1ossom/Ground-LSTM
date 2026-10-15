@@ -1,0 +1,38 @@
+{
+  "status": "SUCCESS",
+  "backend": "lstm",
+  "copied_to_new_directory": true,
+  "relative_paths": true,
+  "observations": 7200,
+  "aligned_rows": 7200,
+  "decision_thresholds": {
+    "on": 0.1741286814212799,
+    "off": 0.1741286814212799,
+    "consecutive": 2
+  },
+  "recorder": {
+    "status": "SUCCESS",
+    "shutdown_complete": true,
+    "shutdown_timed_out": false,
+    "writer_failed": false,
+    "pending_events": 0,
+    "shutdown_timeout_seconds": 5.0,
+    "saved_events": 8,
+    "dropped_events": 0,
+    "writer_errors": [],
+    "writer_error_count": 0,
+    "max_saved_events": 1000,
+    "storage_disabled": false,
+    "cleanup_error_count": 0,
+    "accepted_raw_observations": 7200,
+    "raw_history_capacity": 1024,
+    "max_raw_observations_per_event": 4096,
+    "raw_history_dropped": 0,
+    "raw_event_dropped": 0,
+    "queue_capacity": 64,
+    "history_capacity": 51
+  },
+  "original_artifacts_modified": false,
+  "clean_install_tested": false,
+  "actual_laptop_tested": false
+}

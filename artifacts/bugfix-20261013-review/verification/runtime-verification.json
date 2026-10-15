@@ -1,0 +1,29 @@
+{
+  "status": "SUCCESS",
+  "aligned_rows": 7200,
+  "max_score_error_against_saved_keras": 1.1920928955078125e-07,
+  "cli_exit_code": 0,
+  "recorder": {
+    "saved_events": 8,
+    "dropped_events": 0,
+    "writer_errors": [],
+    "writer_error_count": 0,
+    "max_saved_events": 1000,
+    "storage_disabled": false,
+    "cleanup_error_count": 0,
+    "accepted_raw_observations": 7200,
+    "raw_history_capacity": 1024,
+    "max_raw_observations_per_event": 4096,
+    "raw_history_dropped": 0,
+    "raw_event_dropped": 0,
+    "queue_capacity": 64,
+    "history_capacity": 51
+  },
+  "events_verified": 8,
+  "raw_event_records_verified": 568,
+  "real_keras_error_became_unavailable": true,
+  "real_keras_alarm_preserved": true,
+  "real_keras_recovered": true,
+  "model_retrained": false,
+  "mcu_verified": false
+}

@@ -1,0 +1,3 @@
+timestamp,ground_voltage_a,ground_voltage_b,leakage_current,limiter_temp_a,limiter_temp_b,limiter_temp_c,humidity,ambient_temp,input_voltage,lightning_sensor,event_id,session_id,device_id,ground_truth,source,acquisition_kind,is_synthetic,sensor_status,communication_status,scenario
+2026-02-01T00:48:00+00:00,0.5366028299995148,0.3333243574479622,0.0015321178052556967,29.629605424842396,29.640187110832883,29.18420069676097,37.77347771327798,16.601560470242738,231.74225719652438,0.0,fixture-048,case-048,SOFTWARE_DEVICE,normal,monitoring,synthetic,True,OK,OK,compound
+2026-02-01T00:48:00+00:00,0.5692392274514918,0.4015661826676688,,,,,,,,0.0,fixture-048,case-048,SOFTWARE_DEVICE,normal,monitoring,synthetic,True,OK,OK,compound

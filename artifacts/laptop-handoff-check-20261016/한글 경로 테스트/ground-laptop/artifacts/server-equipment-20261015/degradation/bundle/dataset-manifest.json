@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "phase": 2,
+  "dataset_version": "8ce234402fe22c4e",
+  "inputs": [
+    {
+      "path": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\raw\\equipment-server\\server-equipment-20261015\\degradation.synthetic.csv",
+      "sha256": "ef8b14bbcb7c29e19ba848788a5d12e3eb60dc3a73f30339a73c80bff82d5e53",
+      "rows": 153000,
+      "source": "monitoring",
+      "acquisition_kind": "synthetic"
+    }
+  ],
+  "implementation_sha256": "8e00f3a65088d207e36c2fd80d13b2356ce888f6937ca86fe154b734a158771a",
+  "configuration": {
+    "schema_version": 1,
+    "sensors_config": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\configs\\sensors_equipment_server.yaml",
+    "input": {
+      "directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\raw\\equipment-server",
+      "patterns": [
+        "training.synthetic.csv"
+      ],
+      "source": "monitoring",
+      "acquisition_kind": "synthetic"
+    },
+    "timestamp": {
+      "naive_policy": "reject",
+      "naive_timezone": null,
+      "output_timezone": "UTC"
+    },
+    "quality": {
+      "sampling_relative_tolerance": 0.2,
+      "flatline_seconds": null,
+      "healthy_sensor_status": [
+        "OK"
+      ],
+      "healthy_communication_status": [
+        "OK"
+      ]
+    },
+    "report": {
+      "directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\reports"
+    },
+    "future_pipeline": {
+      "causal": true,
+      "alignment_period_seconds": null,
+      "stale_action": "missing_indicator",
+      "features": [
+        "current_value"
+      ],
+      "scaler": "standard",
+      "split": "event_or_chronological",
+      "purge_gap_seconds": null,
+      "sequence_length": null,
+      "stride": null,
+      "pre_event_seconds": null,
+      "post_event_seconds": null
+    },
+    "pipeline": {
+      "segment_policy": "acquisition",
+      "alignment_period_seconds": 0.1,
+      "stale_action": "missing_indicator",
+      "features": [
+        "current_value"
+      ],
+      "include_missing_indicators": true,
+      "include_age_features": true,
+      "rolling_window_steps": null,
+      "ground_voltage_difference": false,
+      "scaler": "standard",
+      "split": {
+        "mode": "event",
+        "ratios": [
+          0.6,
+          0.2,
+          0.2
+        ],
+        "purge_gap_seconds": 0
+      },
+      "labeling": {
+        "mode": "binary",
+        "mapping": {
+          "normal": 0,
+          "risk": 1
+        }
+      },
+      "windows": {
+        "allow_event_crossing": true,
+        "sequence_length": 64,
+        "stride": 10,
+        "label_horizon_seconds": 0
+      },
+      "events": {
+        "pre_event_seconds": 5,
+        "post_event_seconds": 2
+      },
+      "output_directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\processed",
+      "scaler_directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\scaler",
+      "equipment_features": {
+        "counter_sensor": "lightning_sensor",
+        "counter_window_seconds": 10,
+        "ambient_sensor": "ambient_temp",
+        "ambient_reference_degC": 25,
+        "limiter_sensors": [
+          "limiter_temp_a",
+          "limiter_temp_b",
+          "limiter_temp_c"
+        ],
+        "input_voltage_sensor": "input_voltage",
+        "input_voltage_reference": 220,
+        "response_sensors": [
+          "ground_voltage_a",
+          "ground_voltage_b"
+        ],
+        "response_window_seconds": 10
+      }
+    }
+  },
+  "sensors": [
+    {
+      "name": "ground_voltage_a",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 50,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "ground_voltage_b",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 50,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "leakage_current",
+      "unit": "A",
+      "expected_min": 0.001,
+      "expected_max": 1,
+      "nominal_sampling_period": 1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "limiter_temp_a",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_b",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_c",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "humidity",
+      "unit": "percent_RH",
+      "expected_min": 20,
+      "expected_max": 90,
+      "nominal_sampling_period": 3600,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 7200,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "ambient_temp",
+      "unit": "degC",
+      "expected_min": -20,
+      "expected_max": 80,
+      "nominal_sampling_period": 3600,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 7200,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "input_voltage",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 1500,
+      "nominal_sampling_period": 1,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "lightning_sensor",
+      "unit": "count",
+      "expected_min": 0,
+      "expected_max": null,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    }
+  ],
+  "feature_order": [
+    "ground_voltage_a__current_value",
+    "ground_voltage_b__current_value",
+    "leakage_current__current_value",
+    "limiter_temp_a__current_value",
+    "limiter_temp_b__current_value",
+    "limiter_temp_c__current_value",
+    "humidity__current_value",
+    "ambient_temp__current_value",
+    "input_voltage__current_value",
+    "lightning_sensor__log1p_increment",
+    "ground_voltage_a__missing",
+    "ground_voltage_b__missing",
+    "leakage_current__missing",
+    "limiter_temp_a__missing",
+    "limiter_temp_b__missing",
+    "limiter_temp_c__missing",
+    "humidity__missing",
+    "ambient_temp__missing",
+    "input_voltage__missing",
+    "lightning_sensor__missing",
+    "ground_voltage_a__age_seconds",
+    "ground_voltage_b__age_seconds",
+    "leakage_current__age_seconds",
+    "limiter_temp_a__age_seconds",
+    "limiter_temp_b__age_seconds",
+    "limiter_temp_c__age_seconds",
+    "humidity__age_seconds",
+    "ambient_temp__age_seconds",
+    "input_voltage__age_seconds",
+    "lightning_sensor__age_seconds",
+    "lightning_sensor__recent_rate_per_second",
+    "lightning_sensor__reset",
+    "lightning_sensor__increment_known",
+    "limiter_temp_a__minus_ambient_degC",
+    "limiter_temp_b__minus_ambient_degC",
+    "limiter_temp_c__minus_ambient_degC",
+    "ambient_temp__minus_reference_degC",
+    "input_voltage__minus_reference",
+    "input_voltage__relative_deviation"
+  ],
+  "split": {
+    "mode": "event",
+    "boundaries": [
+      "2026-03-01T02:33:00+00:00",
+      "2026-03-01T03:24:00+00:00"
+    ],
+    "purged_rows": 0,
+    "raw_rows": {
+      "train": 91800,
+      "validation": 30600,
+      "test": 30600
+    },
+    "events": {
+      "train": [
+        "equipment-0001",
+        "equipment-0002",
+        "equipment-0003",
+        "equipment-0004",
+        "equipment-0005",
+        "equipment-0006",
+        "equipment-0007",
+        "equipment-0008",
+        "equipment-0009",
+        "equipment-0010",
+        "equipment-0011",
+        "equipment-0012",
+        "equipment-0013",
+        "equipment-0014",
+        "equipment-0015",
+        "equipment-0016",
+        "equipment-0017",
+        "equipment-0018",
+        "equipment-0019",
+        "equipment-0020",
+        "equipment-0021",
+        "equipment-0022",
+        "equipment-0023",
+        "equipment-0024",
+        "equipment-0025",
+        "equipment-0026",
+        "equipment-0027",
+        "equipment-0028",
+        "equipment-0029",
+        "equipment-0030",
+        "equipment-0031",
+        "equipment-0032",
+        "equipment-0033",
+        "equipment-0034",
+        "equipment-0035",
+        "equipment-0036",
+        "equipment-0037",
+        "equipment-0038",
+        "equipment-0039",
+        "equipment-0040",
+        "equipment-0041",
+        "equipment-0042",
+        "equipment-0043",
+        "equipment-0044",
+        "equipment-0045",
+        "equipment-0046",
+        "equipment-0047",
+        "equipment-0048",
+        "equipment-0049",
+        "equipment-0050",
+        "equipment-0051"
+      ],
+      "validation": [
+        "equipment-0052",
+        "equipment-0053",
+        "equipment-0054",
+        "equipment-0055",
+        "equipment-0056",
+        "equipment-0057",
+        "equipment-0058",
+        "equipment-0059",
+        "equipment-0060",
+        "equipment-0061",
+        "equipment-0062",
+        "equipment-0063",
+        "equipment-0064",
+        "equipment-0065",
+        "equipment-0066",
+        "equipment-0067",
+        "equipment-0068"
+      ],
+      "test": [
+        "equipment-0069",
+        "equipment-0070",
+        "equipment-0071",
+        "equipment-0072",
+        "equipment-0073",
+        "equipment-0074",
+        "equipment-0075",
+        "equipment-0076",
+        "equipment-0077",
+        "equipment-0078",
+        "equipment-0079",
+        "equipment-0080",
+        "equipment-0081",
+        "equipment-0082",
+        "equipment-0083",
+        "equipment-0084",
+        "equipment-0085"
+      ]
+    }
+  },
+  "aligned_rows": {
+    "train": 91798,
+    "validation": 30600,
+    "test": 30600
+  },
+  "windows": {
+    "train": 8874,
+    "validation": 2958,
+    "test": 2958
+  },
+  "unlabeled_windows": {
+    "train": 0,
+    "validation": 0,
+    "test": 0
+  },
+  "supervised_training_ready": false,
+  "label_status": "LABELED",
+  "event_files": {
+    "train": {},
+    "validation": {},
+    "test": {}
+  },
+  "scaler_fit_split": "train",
+  "notes": [
+    "Post-event exports are offline verification data, not prediction inputs.",
+    "Missing features use medians fitted on valid train rows only; missing indicators are preserved.",
+    "No model is trained or physical detection performance claimed."
+  ]
+}

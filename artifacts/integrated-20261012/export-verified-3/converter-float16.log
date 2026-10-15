@@ -1,0 +1,17 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791776640.192841   96000 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791776645.419962   96000 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791776650.484500   96000 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+W0000 00:00:1791776651.491727   96000 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1791776651.491780   96000 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1791776651.492504   96000 reader.cc:83] Reading SavedModel from: C:\Users\bloss\AppData\Local\Temp\lightning-export-2tiahawm\saved_model
+I0000 00:00:1791776651.496079   96000 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1791776651.496119   96000 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\bloss\AppData\Local\Temp\lightning-export-2tiahawm\saved_model
+I0000 00:00:1791776651.552171   96000 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1791776651.557296   96000 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1791776651.685479   96000 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\bloss\AppData\Local\Temp\lightning-export-2tiahawm\saved_model
+I0000 00:00:1791776651.777201   96000 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 284716 microseconds.
+I0000 00:00:1791776651.908734   96000 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1791776652.337982   96000 flatbuffer_export.cc:4302] Estimated count of arithmetic ops: 0.591 M  ops, equivalently 0.295 M  MACs

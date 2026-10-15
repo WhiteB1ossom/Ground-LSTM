@@ -1,0 +1,3061 @@
+{
+  "schema_version": 1,
+  "status": "SUCCESS",
+  "raw_rows": 153000,
+  "heldout_rows": 30600,
+  "ten_sensors_enabled": true,
+  "features": 39,
+  "offline_stream_tensor_parity_windows": {
+    "degradation": 2958,
+    "surge": 2958
+  },
+  "maximum_score_error": {
+    "degradation": 5.960464477539063e-08,
+    "surge": 1.862645149230957e-08
+  },
+  "joint_confusion_matrix": [
+    [
+      14283,
+      0,
+      9,
+      0
+    ],
+    [
+      183,
+      14136,
+      0,
+      18
+    ],
+    [
+      9,
+      0,
+      291,
+      0
+    ],
+    [
+      0,
+      18,
+      0,
+      582
+    ]
+  ],
+  "joint_axes": [
+    "normal",
+    "equipment_review",
+    "surge_activity",
+    "both"
+  ],
+  "counter_activity_baseline": {
+    "confusion_matrix": [
+      [
+        29682,
+        0
+      ],
+      [
+        0,
+        900
+      ]
+    ],
+    "covered_rows": 30582,
+    "meaning": "observed_recent_counter_increase_not_lightning_truth"
+  },
+  "per_scenario": {
+    "temp_c": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "hot_ambient": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "leakage": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "response_failure": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 2,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              144,
+              0
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 150.0,
+        "normal_valid_seconds": 143.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 3,
+        "detected_risk_intervals": 3,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 3,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.9,
+        "normal_alarm_seconds_including_unavailable": 0.9,
+        "normal_alarm_fraction": 0.006263048016701462,
+        "detection_delays_seconds": [
+          0.3,
+          0.3,
+          0.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 0.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "voltage_deviation": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 2,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "temp_a": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 2,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "surge_only": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              144,
+              0
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 150.0,
+        "normal_valid_seconds": 143.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 3,
+        "detected_risk_intervals": 3,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 3,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.9,
+        "normal_alarm_seconds_including_unavailable": 0.9,
+        "normal_alarm_fraction": 0.006263048016701462,
+        "detection_delays_seconds": [
+          0.3,
+          0.3,
+          0.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 0.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "mixed": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "temp_b": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 2,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "normal": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "ground_a": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "both": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 2,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              144,
+              0
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 150.0,
+        "normal_valid_seconds": 143.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 3,
+        "detected_risk_intervals": 3,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 3,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.9,
+        "normal_alarm_seconds_including_unavailable": 0.9,
+        "normal_alarm_fraction": 0.006263048016701462,
+        "detection_delays_seconds": [
+          0.3,
+          0.3,
+          0.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 0.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "counter_reset": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "ground_b": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "heating_without_surge": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 60.0,
+        "normal_valid_seconds": 53.7,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 2,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              54,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              120
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "humidity": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              172
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 2,
+          "precision": 1.0,
+          "recall": 0.9885057471264368,
+          "f1": 0.9942196531791908,
+          "accuracy": 0.9885057471264368,
+          "risk_false_positive_rate": null,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 0.0,
+        "normal_valid_seconds": 0.0,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 1,
+        "detected_risk_intervals": 1,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 1,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 3,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": null,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": null,
+        "detection_delays_seconds": [
+          6.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 6.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              172
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "high_count_only": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 1,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 174,
+          "confusion_matrix": [
+            [
+              174,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 180.0,
+        "normal_seconds": 180.0,
+        "normal_valid_seconds": 173.70000000000002,
+        "available_seconds": 173.70000000000002,
+        "coverage": 0.965,
+        "risk_intervals": 0,
+        "detected_risk_intervals": 0,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 0,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 0.0,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": null,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 174,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    }
+  },
+  "counter_reset_not_new_surge": true,
+  "tensorflow_failure_preserved_alarm": true,
+  "recovered": true,
+  "unlabeled_boundary_challenges_verified": 21,
+  "portable_server_copy_verified": true,
+  "actual_laptop_verified": false,
+  "combined_cli": {
+    "schema_version": 1,
+    "status": "SUCCESS",
+    "deployment_target": "server",
+    "observations": 9000,
+    "aligned_rows": 9000,
+    "states": {
+      "UNAVAILABLE": 315,
+      "NORMAL": 6011,
+      "SURGE_ACTIVITY": 300,
+      "EQUIPMENT_REVIEW": 2074,
+      "EQUIPMENT_REVIEW_AND_SURGE": 300
+    },
+    "rejected_observations": 0,
+    "processing_failure_count": 0,
+    "errors": [],
+    "tasks": {
+      "degradation": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 870,
+          "confusion_matrix": [
+            [
+              630,
+              0
+            ],
+            [
+              0,
+              240
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 900.0,
+        "normal_seconds": 660.0,
+        "normal_valid_seconds": 628.5,
+        "available_seconds": 868.5,
+        "coverage": 0.965,
+        "risk_intervals": 2,
+        "detected_risk_intervals": 2,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 3,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 0.0,
+        "normal_alarm_seconds_including_unavailable": 6.300000000000001,
+        "normal_alarm_fraction": 0.0,
+        "detection_delays_seconds": [
+          1.3,
+          1.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 1.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              630,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              240
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 0,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      },
+      "surge": {
+        "scope": "timestamp_replay_not_mcu_or_physical_validation",
+        "window": {
+          "samples": 870,
+          "confusion_matrix": [
+            [
+              810,
+              0
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "risk_false_positive_rate": 0.0,
+          "threshold": 0.5,
+          "scope": "window_level"
+        },
+        "total_seconds": 900.0,
+        "normal_seconds": 840.0,
+        "normal_valid_seconds": 808.5,
+        "available_seconds": 868.5,
+        "coverage": 0.965,
+        "risk_intervals": 6,
+        "detected_risk_intervals": 6,
+        "missed_risk_intervals": 0,
+        "incompletely_covered_risk_intervals": 0,
+        "missed_fully_covered_risk_intervals": 0,
+        "alarm_episodes": 6,
+        "false_alarm_episodes": 0,
+        "unmatched_alarm_episodes": 0,
+        "false_alarm_per_normal_valid_hour": 0.0,
+        "normal_alarm_seconds": 1.8,
+        "normal_alarm_seconds_including_unavailable": 1.8,
+        "normal_alarm_fraction": 0.0022263450834879408,
+        "detection_delays_seconds": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "delay_sample_limit": 1024,
+        "median_detection_delay_seconds": 0.3,
+        "unclassified_rows": 0,
+        "rule_condition_by_truth_by_prediction": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "rule_unknown_scored_windows": 870,
+        "rule_cube_axes": [
+          "condition_met:false/true",
+          "truth:normal/risk",
+          "prediction:normal/risk"
+        ],
+        "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+      }
+    },
+    "recorders": {
+      "degradation": {
+        "status": "SUCCESS",
+        "shutdown_complete": true,
+        "shutdown_timed_out": false,
+        "writer_failed": false,
+        "pending_events": 0,
+        "shutdown_timeout_seconds": 5,
+        "saved_events": 2,
+        "dropped_events": 0,
+        "writer_errors": [],
+        "writer_error_count": 0,
+        "max_saved_events": 1000,
+        "storage_disabled": false,
+        "cleanup_error_count": 0,
+        "accepted_raw_observations": 9000,
+        "raw_history_capacity": 1024,
+        "max_raw_observations_per_event": 4096,
+        "raw_history_dropped": 0,
+        "raw_event_dropped": 0,
+        "queue_capacity": 64,
+        "history_capacity": 51
+      },
+      "surge": {
+        "status": "SUCCESS",
+        "shutdown_complete": true,
+        "shutdown_timed_out": false,
+        "writer_failed": false,
+        "pending_events": 0,
+        "shutdown_timeout_seconds": 5,
+        "saved_events": 6,
+        "dropped_events": 0,
+        "writer_errors": [],
+        "writer_error_count": 0,
+        "max_saved_events": 1000,
+        "storage_disabled": false,
+        "cleanup_error_count": 0,
+        "accepted_raw_observations": 9000,
+        "raw_history_capacity": 1024,
+        "max_raw_observations_per_event": 4096,
+        "raw_history_dropped": 0,
+        "raw_event_dropped": 0,
+        "queue_capacity": 64,
+        "history_capacity": 51
+      }
+    },
+    "timeline": {
+      "segment_bytes": 33554432,
+      "max_segments": 8,
+      "maximum_retained_bytes": 268435456,
+      "files": [
+        "timeline.jsonl",
+        "timeline.000001.jsonl",
+        "timeline.000002.jsonl"
+      ],
+      "retained_records": 9000,
+      "retained_payload_bytes": 87176812,
+      "written_records": 9000,
+      "evicted_records": 0,
+      "dropped_records": 0,
+      "retention_truncated": false,
+      "error_count": 0,
+      "errors": [],
+      "disabled": false
+    },
+    "lightning_confirmation_supported": false,
+    "physical_validation": false,
+    "hardware_actuation_performed": false
+  },
+  "protected_files": 98,
+  "protected_changed": [],
+  "selection": {
+    "degradation": {
+      "selected": "lstm32",
+      "test": {
+        "samples": 2958,
+        "accuracy": 0.9993238674780257,
+        "precision": 1.0,
+        "recall": 0.998661311914324,
+        "f1": 0.999330207635633,
+        "risk_pr_auc_trapezoidal": 0.9999964292634864,
+        "risk_average_precision": 0.9999964304540353,
+        "false_negatives": 2,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            1464,
+            0
+          ],
+          [
+            2,
+            1492
+          ]
+        ],
+        "risk_false_negative_rate": 0.0013386880856760374,
+        "risk_false_positive_rate": 0.0,
+        "risk_prevalence": 0.5050709939148073,
+        "predicted_risk_fraction": 0.504394861392833,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1464,
+            "false_negatives": 0,
+            "false_positives": 2
+          },
+          {
+            "class_id": 1,
+            "support": 1494,
+            "false_negatives": 2,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 12,
+          "detected_in_positive_windows": 12,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 5,
+          "normal_groups_with_false_alarm": 0,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "best_epoch": 47,
+      "epochs_completed": 50
+    },
+    "surge": {
+      "selected": "lstm32",
+      "test": {
+        "samples": 2958,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "risk_pr_auc_trapezoidal": 0.9999999999999999,
+        "risk_average_precision": 0.9999999999999999,
+        "false_negatives": 0,
+        "false_positives": 0,
+        "confusion_matrix": [
+          [
+            2868,
+            0
+          ],
+          [
+            0,
+            90
+          ]
+        ],
+        "risk_false_negative_rate": 0.0,
+        "risk_false_positive_rate": 0.0,
+        "risk_prevalence": 0.030425963488843813,
+        "predicted_risk_fraction": 0.030425963488843813,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 2868,
+            "false_negatives": 0,
+            "false_positives": 0
+          },
+          {
+            "class_id": 1,
+            "support": 90,
+            "false_negatives": 0,
+            "false_positives": 0
+          }
+        ],
+        "threshold": 0.5,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_session_event_groups",
+          "risk_groups": 3,
+          "detected_in_positive_windows": 3,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 14,
+          "normal_groups_with_false_alarm": 0,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "best_epoch": 49,
+      "epochs_completed": 49
+    }
+  },
+  "physical_validation": false,
+  "hardware_actuation_performed": false
+}

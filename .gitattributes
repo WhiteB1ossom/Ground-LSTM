@@ -1,0 +1,59 @@
+# Preserve original file bytes, including existing line endings.
+* -text
+# Store files of 10 MiB or larger in Git LFS.
+".venv-ml/Lib/site-packages/ai_edge_litert/libLiteRtWebGpuAccelerator.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/ai_edge_litert/pywrap_litert_common.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/clang/native/libclang.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/grpc/_cython/cygrpc.cp312-win_amd64.pyd" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/numpy.libs/libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/pyarrow/arrow.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/pyarrow/arrow_flight.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/scipy.libs/libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/tensorflow/compiler/mlir/stablehlo/stablehlo_extension.pyd" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/tensorflow/compiler/tf2xla/ops/_xla_ops.so" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/tensorflow/include/tensorflow/compiler/mlir/tensorflow/ir/tf_all_ops.h.inc" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/tensorflow/lite/python/pywrap_tflite_common.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_common.dll" filter=lfs diff=lfs merge=lfs -text
+".venv-ml/Lib/site-packages/tensorflow/python/profiler/internal/_pywrap_profiler_plugin.pyd" filter=lfs diff=lfs merge=lfs -text
+".venv/Lib/site-packages/numpy.libs/libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll" filter=lfs diff=lfs merge=lfs -text
+".venv/Lib/site-packages/pyarrow/arrow.dll" filter=lfs diff=lfs merge=lfs -text
+".venv/Lib/site-packages/pyarrow/arrow_flight.dll" filter=lfs diff=lfs merge=lfs -text
+".venv/Lib/site-packages/scipy.libs/libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll" filter=lfs diff=lfs merge=lfs -text
+"artifacts/bugfix-20261013-extra/verification/parquet-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/bugfix-20261013-review/verification/parquet-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/fixes-20261015/verification/parquet-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/calibrated-2/replay/heldout/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/calibrated-2/replay/long-normal/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/calibrated-3/replay/heldout/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/calibrated-3/replay/long-normal/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/calibrated/replay/faults/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/calibrated/replay/heldout/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/calibrated/replay/long-normal/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/integrated-20261012/final-audit/litert-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/laptop-check/20261016-010208-875201-9fca78/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/laptop-handoff-check-20261016/한글 경로 테스트/ground-laptop/artifacts/laptop-check/20261016-010407-132793-f20859/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/laptop-transfer-check-20261015/relocated project/artifacts/laptop-replay-check/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/presentation-demo/20261016-002822-668115-22aa9c/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/presentation-demo/20261016-002838-256264-517f59/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/presentation-demo/20261016-002853-677079-4a9538/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/presentation-demo/20261016-002908-974509-2f5786/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/presentation-demo/20261016-002924-230105-354f93/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/report-new-20261016/hwp-cli/bin/hwp.exe" filter=lfs diff=lfs merge=lfs -text
+"artifacts/reports/degradation.synthetic.ef8b14bbcb7c.quality.json" filter=lfs diff=lfs merge=lfs -text
+"artifacts/reports/surge.synthetic.4802fd2537b2.quality.json" filter=lfs diff=lfs merge=lfs -text
+"artifacts/reports/training.synthetic.0c4bcb0b8814.quality.json" filter=lfs diff=lfs merge=lfs -text
+"artifacts/review-20261014/verification/parquet-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-equipment-20261015/degradation/heldout-replay/timeline.000001.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-equipment-20261015/degradation/heldout-replay/timeline.000002.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-equipment-20261015/degradation/heldout-replay/timeline.000003.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-equipment-20261015/degradation/heldout-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-equipment-20261015/surge/heldout-replay/timeline.000001.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-equipment-20261015/surge/heldout-replay/timeline.000002.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-equipment-20261015/surge/heldout-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-upgrade-20261015/combined-replay/timeline.000001.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-upgrade-20261015/combined-replay/timeline.000002.jsonl" filter=lfs diff=lfs merge=lfs -text
+"artifacts/server-upgrade-20261015/combined-replay/timeline.jsonl" filter=lfs diff=lfs merge=lfs -text
+"data/raw/equipment-server/server-equipment-20261015/degradation.synthetic.csv" filter=lfs diff=lfs merge=lfs -text
+"data/raw/equipment-server/server-equipment-20261015/observations.synthetic.csv" filter=lfs diff=lfs merge=lfs -text
+"data/raw/equipment-server/server-equipment-20261015/surge.synthetic.csv" filter=lfs diff=lfs merge=lfs -text
+"data/raw/integration/integrated-20261012/normal-hour.synthetic.csv" filter=lfs diff=lfs merge=lfs -text

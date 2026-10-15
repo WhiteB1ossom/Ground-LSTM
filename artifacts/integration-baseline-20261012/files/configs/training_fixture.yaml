@@ -1,0 +1,7 @@
+schema_version: 1
+purpose: SOFTWARE_TRAINING_TEST_ONLY_NOT_PHYSICAL_PERFORMANCE
+synthetic_state_mapping:
+  normal: normal
+  approaching_risk: risk
+  lightning_event: risk
+  recovery: normal

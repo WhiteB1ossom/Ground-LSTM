@@ -1,0 +1,395 @@
+{
+  "selection_split": "validation",
+  "selected_lstm": "lstm16-fast-only",
+  "candidates": [
+    {
+      "name": "lstm16",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm16",
+      "hidden_units": 16,
+      "seed": 42,
+      "validation": {
+        "samples": 1620,
+        "accuracy": 0.9827160493827161,
+        "precision": 0.89171974522293,
+        "recall": 0.9271523178807947,
+        "f1": 0.9090909090909091,
+        "risk_pr_auc_trapezoidal": 0.9721044227718093,
+        "risk_average_precision": 0.9721750276625429,
+        "false_negatives": 11,
+        "false_positives": 17,
+        "confusion_matrix": [
+          [
+            1452,
+            17
+          ],
+          [
+            11,
+            140
+          ]
+        ],
+        "risk_false_negative_rate": 0.0728476821192053,
+        "risk_false_positive_rate": 0.011572498298162015,
+        "risk_prevalence": 0.09320987654320988,
+        "predicted_risk_fraction": 0.09691358024691359,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1469,
+            "false_negatives": 17,
+            "false_positives": 11
+          },
+          {
+            "class_id": 1,
+            "support": 151,
+            "false_negatives": 11,
+            "false_positives": 17
+          }
+        ],
+        "threshold": 0.24585509300231934,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_event_groups",
+          "risk_groups": 6,
+          "detected_in_positive_windows": 6,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 6,
+          "normal_groups_with_false_alarm": 0,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "resources": {
+        "parameters": 3025,
+        "keras_file_bytes": 61277,
+        "float32_weight_bytes_estimate": 12100,
+        "input_tensor_bytes": 7680,
+        "recurrent_state_bytes_lower_bound": 128,
+        "host_latency_ms": {
+          "median": 227.0996,
+          "p95": 298.6762,
+          "repetitions": 10,
+          "batch_size": 1,
+          "includes_python_call": true
+        },
+        "mcu_ram_estimate": null,
+        "mcu_latency": null,
+        "tflite_size": null
+      }
+    },
+    {
+      "name": "lstm32",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm32",
+      "hidden_units": 32,
+      "seed": 42,
+      "validation": {
+        "samples": 1620,
+        "accuracy": 0.9401234567901234,
+        "precision": 0.6238532110091743,
+        "recall": 0.9006622516556292,
+        "f1": 0.7371273712737128,
+        "risk_pr_auc_trapezoidal": 0.9306498083613881,
+        "risk_average_precision": 0.9307903696408866,
+        "false_negatives": 15,
+        "false_positives": 82,
+        "confusion_matrix": [
+          [
+            1387,
+            82
+          ],
+          [
+            15,
+            136
+          ]
+        ],
+        "risk_false_negative_rate": 0.09933774834437085,
+        "risk_false_positive_rate": 0.055820285908781485,
+        "risk_prevalence": 0.09320987654320988,
+        "predicted_risk_fraction": 0.1345679012345679,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1469,
+            "false_negatives": 82,
+            "false_positives": 15
+          },
+          {
+            "class_id": 1,
+            "support": 151,
+            "false_negatives": 15,
+            "false_positives": 82
+          }
+        ],
+        "threshold": 0.06975705176591873,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_event_groups",
+          "risk_groups": 6,
+          "detected_in_positive_windows": 6,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 6,
+          "normal_groups_with_false_alarm": 2,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "resources": {
+        "parameters": 8097,
+        "keras_file_bytes": 122143,
+        "float32_weight_bytes_estimate": 32388,
+        "input_tensor_bytes": 7680,
+        "recurrent_state_bytes_lower_bound": 256,
+        "host_latency_ms": {
+          "median": 116.19290000000001,
+          "p95": 127.95537499999999,
+          "repetitions": 10,
+          "batch_size": 1,
+          "includes_python_call": true
+        },
+        "mcu_ram_estimate": null,
+        "mcu_latency": null,
+        "tflite_size": null
+      }
+    },
+    {
+      "name": "lstm64",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm64",
+      "hidden_units": 64,
+      "seed": 42,
+      "validation": {
+        "samples": 1620,
+        "accuracy": 0.9864197530864197,
+        "precision": 0.9448275862068966,
+        "recall": 0.9072847682119205,
+        "f1": 0.9256756756756757,
+        "risk_pr_auc_trapezoidal": 0.9765902021284842,
+        "risk_average_precision": 0.9766413153020167,
+        "false_negatives": 14,
+        "false_positives": 8,
+        "confusion_matrix": [
+          [
+            1461,
+            8
+          ],
+          [
+            14,
+            137
+          ]
+        ],
+        "risk_false_negative_rate": 0.09271523178807947,
+        "risk_false_positive_rate": 0.005445881552076242,
+        "risk_prevalence": 0.09320987654320988,
+        "predicted_risk_fraction": 0.08950617283950617,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1469,
+            "false_negatives": 8,
+            "false_positives": 14
+          },
+          {
+            "class_id": 1,
+            "support": 151,
+            "false_negatives": 14,
+            "false_positives": 8
+          }
+        ],
+        "threshold": 0.31284192204475403,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_event_groups",
+          "risk_groups": 6,
+          "detected_in_positive_windows": 6,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 6,
+          "normal_groups_with_false_alarm": 1,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "resources": {
+        "parameters": 24385,
+        "keras_file_bytes": 317599,
+        "float32_weight_bytes_estimate": 97540,
+        "input_tensor_bytes": 7680,
+        "recurrent_state_bytes_lower_bound": 512,
+        "host_latency_ms": {
+          "median": 133.78665,
+          "p95": 155.15977999999998,
+          "repetitions": 10,
+          "batch_size": 1,
+          "includes_python_call": true
+        },
+        "mcu_ram_estimate": null,
+        "mcu_latency": null,
+        "tflite_size": null
+      }
+    },
+    {
+      "name": "lstm16-seed43",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm16-seed43",
+      "hidden_units": 16,
+      "seed": 43,
+      "validation": {
+        "samples": 1620,
+        "accuracy": 0.9808641975308642,
+        "precision": 0.8571428571428571,
+        "recall": 0.9536423841059603,
+        "f1": 0.9028213166144201,
+        "risk_pr_auc_trapezoidal": 0.9677920976558446,
+        "risk_average_precision": 0.9678665186109741,
+        "false_negatives": 7,
+        "false_positives": 24,
+        "confusion_matrix": [
+          [
+            1445,
+            24
+          ],
+          [
+            7,
+            144
+          ]
+        ],
+        "risk_false_negative_rate": 0.046357615894039736,
+        "risk_false_positive_rate": 0.016337644656228726,
+        "risk_prevalence": 0.09320987654320988,
+        "predicted_risk_fraction": 0.1037037037037037,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1469,
+            "false_negatives": 24,
+            "false_positives": 7
+          },
+          {
+            "class_id": 1,
+            "support": 151,
+            "false_negatives": 7,
+            "false_positives": 24
+          }
+        ],
+        "threshold": 0.25243768095970154,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_event_groups",
+          "risk_groups": 6,
+          "detected_in_positive_windows": 6,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 6,
+          "normal_groups_with_false_alarm": 4,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "resources": {
+        "parameters": 3025,
+        "keras_file_bytes": 61279,
+        "float32_weight_bytes_estimate": 12100,
+        "input_tensor_bytes": 7680,
+        "recurrent_state_bytes_lower_bound": 128,
+        "host_latency_ms": {
+          "median": 115.4847,
+          "p95": 121.256045,
+          "repetitions": 10,
+          "batch_size": 1,
+          "includes_python_call": true
+        },
+        "mcu_ram_estimate": null,
+        "mcu_latency": null,
+        "tflite_size": null
+      }
+    },
+    {
+      "name": "lstm16-fast-only",
+      "directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm16-fast-only",
+      "hidden_units": 16,
+      "seed": 42,
+      "feature_count": 15,
+      "dataset_directory": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\dataset-fast-only",
+      "validation": {
+        "samples": 1620,
+        "accuracy": 0.9907407407407407,
+        "precision": 0.925,
+        "recall": 0.9801324503311258,
+        "f1": 0.9517684887459807,
+        "risk_pr_auc_trapezoidal": 0.9838162556128662,
+        "risk_average_precision": 0.9838608791888737,
+        "false_negatives": 3,
+        "false_positives": 12,
+        "confusion_matrix": [
+          [
+            1457,
+            12
+          ],
+          [
+            3,
+            148
+          ]
+        ],
+        "risk_false_negative_rate": 0.019867549668874173,
+        "risk_false_positive_rate": 0.008168822328114363,
+        "risk_prevalence": 0.09320987654320988,
+        "predicted_risk_fraction": 0.09876543209876543,
+        "per_class": [
+          {
+            "class_id": 0,
+            "support": 1469,
+            "false_negatives": 12,
+            "false_positives": 3
+          },
+          {
+            "class_id": 1,
+            "support": 151,
+            "false_negatives": 3,
+            "false_positives": 12
+          }
+        ],
+        "threshold": 0.1741286814212799,
+        "scope": "window_level_not_event_level",
+        "averaging": "binary",
+        "event_summary": {
+          "status": "evaluated",
+          "scope": "labeled_device_event_groups",
+          "risk_groups": 6,
+          "detected_in_positive_windows": 6,
+          "missed_risk_groups": 0,
+          "incompletely_covered_risk_groups": 0,
+          "risk_group_detection_fraction": 1.0,
+          "normal_groups": 6,
+          "normal_groups_with_false_alarm": 1,
+          "note": "Event ID summaries are retrospective; onset, lead time and alarms/hour are not established."
+        }
+      },
+      "resources": {
+        "parameters": 2065,
+        "keras_file_bytes": 49757,
+        "float32_weight_bytes_estimate": 8260,
+        "input_tensor_bytes": 3840,
+        "recurrent_state_bytes_lower_bound": 128,
+        "host_latency_ms": {
+          "median": 307.2104,
+          "p95": 371.20493999999997,
+          "repetitions": 10,
+          "batch_size": 1,
+          "includes_python_call": true
+        },
+        "mcu_ram_estimate": null,
+        "mcu_latency": null,
+        "tflite_size": null
+      }
+    }
+  ],
+  "deployment_approved": false,
+  "note": "Hidden/seed and fast-only ablation selected only on validation; no physical/MCU approval."
+}

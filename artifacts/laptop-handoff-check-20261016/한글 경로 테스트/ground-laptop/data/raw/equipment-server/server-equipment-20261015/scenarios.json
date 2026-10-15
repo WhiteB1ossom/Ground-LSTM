@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "purpose": "SOFTWARE_CAUSES_NOT_VERIFIED_EQUIPMENT_DEGRADATION_OR_LIGHTNING",
+  "seed": 20261015,
+  "rows": 153000,
+  "sessions": 85,
+  "scenario_kinds": [
+    "normal",
+    "hot_ambient",
+    "high_count_only",
+    "counter_reset",
+    "temp_a",
+    "temp_b",
+    "temp_c",
+    "heating_without_surge",
+    "leakage",
+    "ground_a",
+    "ground_b",
+    "humidity",
+    "mixed",
+    "surge_only",
+    "both",
+    "response_failure",
+    "voltage_deviation"
+  ],
+  "session_index": [
+    {
+      "session_id": "equipment-0001",
+      "split": "train",
+      "scenario": "heating_without_surge",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0002",
+      "split": "train",
+      "scenario": "counter_reset",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0003",
+      "split": "train",
+      "scenario": "ground_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0004",
+      "split": "train",
+      "scenario": "high_count_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0005",
+      "split": "train",
+      "scenario": "temp_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0006",
+      "split": "train",
+      "scenario": "ground_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0007",
+      "split": "train",
+      "scenario": "both",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0008",
+      "split": "train",
+      "scenario": "hot_ambient",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0009",
+      "split": "train",
+      "scenario": "temp_c",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0010",
+      "split": "train",
+      "scenario": "surge_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0011",
+      "split": "train",
+      "scenario": "temp_c",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0012",
+      "split": "train",
+      "scenario": "humidity",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0013",
+      "split": "train",
+      "scenario": "high_count_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0014",
+      "split": "train",
+      "scenario": "counter_reset",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0015",
+      "split": "train",
+      "scenario": "temp_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0016",
+      "split": "train",
+      "scenario": "leakage",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0017",
+      "split": "train",
+      "scenario": "normal",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0018",
+      "split": "train",
+      "scenario": "counter_reset",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0019",
+      "split": "train",
+      "scenario": "ground_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0020",
+      "split": "train",
+      "scenario": "response_failure",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0021",
+      "split": "train",
+      "scenario": "heating_without_surge",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0022",
+      "split": "train",
+      "scenario": "normal",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0023",
+      "split": "train",
+      "scenario": "ground_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0024",
+      "split": "train",
+      "scenario": "temp_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0025",
+      "split": "train",
+      "scenario": "hot_ambient",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0026",
+      "split": "train",
+      "scenario": "surge_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0027",
+      "split": "train",
+      "scenario": "leakage",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0028",
+      "split": "train",
+      "scenario": "ground_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0029",
+      "split": "train",
+      "scenario": "surge_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0030",
+      "split": "train",
+      "scenario": "temp_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0031",
+      "split": "train",
+      "scenario": "mixed",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0032",
+      "split": "train",
+      "scenario": "humidity",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0033",
+      "split": "train",
+      "scenario": "heating_without_surge",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0034",
+      "split": "train",
+      "scenario": "temp_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0035",
+      "split": "train",
+      "scenario": "both",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0036",
+      "split": "train",
+      "scenario": "temp_c",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0037",
+      "split": "train",
+      "scenario": "response_failure",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0038",
+      "split": "train",
+      "scenario": "mixed",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0039",
+      "split": "train",
+      "scenario": "voltage_deviation",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0040",
+      "split": "train",
+      "scenario": "temp_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0041",
+      "split": "train",
+      "scenario": "hot_ambient",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0042",
+      "split": "train",
+      "scenario": "normal",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0043",
+      "split": "train",
+      "scenario": "both",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0044",
+      "split": "train",
+      "scenario": "mixed",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0045",
+      "split": "train",
+      "scenario": "high_count_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0046",
+      "split": "train",
+      "scenario": "voltage_deviation",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0047",
+      "split": "train",
+      "scenario": "humidity",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0048",
+      "split": "train",
+      "scenario": "ground_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0049",
+      "split": "train",
+      "scenario": "voltage_deviation",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0050",
+      "split": "train",
+      "scenario": "leakage",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0051",
+      "split": "train",
+      "scenario": "response_failure",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0052",
+      "split": "validation",
+      "scenario": "humidity",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0053",
+      "split": "validation",
+      "scenario": "high_count_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0054",
+      "split": "validation",
+      "scenario": "temp_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0055",
+      "split": "validation",
+      "scenario": "temp_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0056",
+      "split": "validation",
+      "scenario": "ground_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0057",
+      "split": "validation",
+      "scenario": "mixed",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0058",
+      "split": "validation",
+      "scenario": "both",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0059",
+      "split": "validation",
+      "scenario": "ground_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0060",
+      "split": "validation",
+      "scenario": "heating_without_surge",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0061",
+      "split": "validation",
+      "scenario": "counter_reset",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0062",
+      "split": "validation",
+      "scenario": "leakage",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0063",
+      "split": "validation",
+      "scenario": "normal",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0064",
+      "split": "validation",
+      "scenario": "voltage_deviation",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0065",
+      "split": "validation",
+      "scenario": "response_failure",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0066",
+      "split": "validation",
+      "scenario": "hot_ambient",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0067",
+      "split": "validation",
+      "scenario": "temp_c",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0068",
+      "split": "validation",
+      "scenario": "surge_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0069",
+      "split": "test",
+      "scenario": "temp_c",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0070",
+      "split": "test",
+      "scenario": "hot_ambient",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0071",
+      "split": "test",
+      "scenario": "leakage",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0072",
+      "split": "test",
+      "scenario": "response_failure",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0073",
+      "split": "test",
+      "scenario": "voltage_deviation",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0074",
+      "split": "test",
+      "scenario": "temp_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0075",
+      "split": "test",
+      "scenario": "surge_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0076",
+      "split": "test",
+      "scenario": "mixed",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0077",
+      "split": "test",
+      "scenario": "temp_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0078",
+      "split": "test",
+      "scenario": "normal",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0079",
+      "split": "test",
+      "scenario": "ground_a",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0080",
+      "split": "test",
+      "scenario": "both",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [
+        650,
+        1050,
+        1450
+      ],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0081",
+      "split": "test",
+      "scenario": "counter_reset",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0082",
+      "split": "test",
+      "scenario": "ground_b",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0083",
+      "split": "test",
+      "scenario": "heating_without_surge",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0084",
+      "split": "test",
+      "scenario": "humidity",
+      "rows": 1800,
+      "degradation_cause": true,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    },
+    {
+      "session_id": "equipment-0085",
+      "split": "test",
+      "scenario": "high_count_only",
+      "rows": 1800,
+      "degradation_cause": false,
+      "surge_ticks": [],
+      "label_source": "declared_software_cause_not_threshold_comparison"
+    }
+  ],
+  "sensors": [
+    {
+      "name": "ground_voltage_a",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 50,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "ground_voltage_b",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 50,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "leakage_current",
+      "unit": "A",
+      "expected_min": 0.001,
+      "expected_max": 1,
+      "nominal_sampling_period": 1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "limiter_temp_a",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_b",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_c",
+      "unit": "degC",
+      "expected_min": 25,
+      "expected_max": 150,
+      "nominal_sampling_period": 60,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "humidity",
+      "unit": "percent_RH",
+      "expected_min": 20,
+      "expected_max": 90,
+      "nominal_sampling_period": 3600,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 7200,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "ambient_temp",
+      "unit": "degC",
+      "expected_min": -20,
+      "expected_max": 80,
+      "nominal_sampling_period": 3600,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 7200,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "input_voltage",
+      "unit": "V_AC",
+      "expected_min": 0,
+      "expected_max": 1500,
+      "nominal_sampling_period": 1,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "lightning_sensor",
+      "unit": "count",
+      "expected_min": 0,
+      "expected_max": null,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "drop_window",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    }
+  ],
+  "zero_response": {
+    "enabled": true,
+    "target_V": 0,
+    "decay_seconds": 0.5,
+    "scope": "hypothetical_software_response_not_verified_device_transfer_function"
+  },
+  "input_voltage_reference": {
+    "value": 220,
+    "provenance": "synthetic_fixture_nominal_not_confirmed_customer_device"
+  },
+  "files": {
+    "degradation.synthetic.csv": "ef8b14bbcb7c29e19ba848788a5d12e3eb60dc3a73f30339a73c80bff82d5e53",
+    "observations.synthetic.csv": "5e5dd5ad4eeab845c09e8f2add87c80e0bb818a80f036a2fc6d47b464985cbda",
+    "surge.synthetic.csv": "4802fd2537b2ae89941b0dc79b27f9d88611a8f60ca9c0a22352dada45a4b333"
+  },
+  "notes": [
+    "Causes are declared before measurements are generated; thresholds do not generate labels.",
+    "A cumulative surge counter also counts overvoltage surges: labels are surge activity, not lightning confirmation.",
+    "Minute/hourly measurements retain real cadence; a short model window learns current context, not hourly trends."
+  ]
+}

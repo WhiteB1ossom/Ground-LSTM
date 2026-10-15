@@ -1,0 +1,49 @@
+{
+  "status": "SUCCESS",
+  "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "executable": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\.venv-ml\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "actual_lstm_inference": true,
+  "synthetic_demo": true,
+  "physical_validation": false,
+  "observations": 1800,
+  "states": [
+    "EQUIPMENT_REVIEW",
+    "EQUIPMENT_REVIEW_AND_SURGE",
+    "NORMAL",
+    "UNAVAILABLE"
+  ],
+  "ring": {
+    "size": 114,
+    "capacity": 114,
+    "window": 64,
+    "features": 39,
+    "stride": 10,
+    "overwritten": 1686
+  },
+  "tasks": {
+    "degradation": {
+      "model_version": "lstm32",
+      "inferences": 174,
+      "threshold_on": 0.5,
+      "threshold_off": 0.5,
+      "consecutive": 2
+    },
+    "surge": {
+      "model_version": "lstm32",
+      "inferences": 174,
+      "threshold_on": 0.5,
+      "threshold_off": 0.5,
+      "consecutive": 1
+    }
+  },
+  "processing_failures": 0,
+  "hardware_actuation_performed": false
+}

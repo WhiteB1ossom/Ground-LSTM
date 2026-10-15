@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "phase": 2,
+  "dataset_version": "862a950365431be7",
+  "inputs": [
+    {
+      "path": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\raw\\phase2-demo.synthetic.csv",
+      "sha256": "bcc6651684e039d87057ae5f52f5372cb409971e5b2c3c039c3be8c494c06577",
+      "rows": 3600,
+      "source": "monitoring",
+      "acquisition_kind": "synthetic"
+    }
+  ],
+  "implementation_sha256": "165050dc5f0c069e45e41b40dda1974b276aa1183083ce988f4633ad6e32284e",
+  "configuration": {
+    "schema_version": 1,
+    "sensors_config": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\configs\\sensors_demo.yaml",
+    "input": {
+      "directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\raw",
+      "patterns": [
+        "phase2-demo.synthetic.csv"
+      ],
+      "source": "monitoring",
+      "acquisition_kind": "synthetic"
+    },
+    "timestamp": {
+      "naive_policy": "reject",
+      "naive_timezone": null,
+      "output_timezone": "UTC"
+    },
+    "quality": {
+      "sampling_relative_tolerance": 0.2,
+      "flatline_seconds": null,
+      "healthy_sensor_status": [
+        "OK"
+      ],
+      "healthy_communication_status": [
+        "OK"
+      ]
+    },
+    "report": {
+      "directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\reports"
+    },
+    "future_pipeline": {
+      "causal": true,
+      "alignment_period_seconds": null,
+      "stale_action": "missing_indicator",
+      "features": [
+        "current_value"
+      ],
+      "scaler": "standard",
+      "split": "event_or_chronological",
+      "purge_gap_seconds": null,
+      "sequence_length": null,
+      "stride": null,
+      "pre_event_seconds": null,
+      "post_event_seconds": null
+    },
+    "pipeline": {
+      "alignment_period_seconds": 0.1,
+      "stale_action": "missing_indicator",
+      "features": [
+        "current_value"
+      ],
+      "include_missing_indicators": true,
+      "include_age_features": false,
+      "rolling_window_steps": null,
+      "ground_voltage_difference": false,
+      "scaler": "standard",
+      "split": {
+        "mode": "event",
+        "ratios": [
+          0.6,
+          0.2,
+          0.2
+        ],
+        "purge_gap_seconds": 0
+      },
+      "labeling": {
+        "mode": "binary",
+        "mapping": null
+      },
+      "windows": {
+        "sequence_length": 16,
+        "stride": 4,
+        "label_horizon_seconds": 0
+      },
+      "events": {
+        "pre_event_seconds": 5,
+        "post_event_seconds": 2
+      },
+      "output_directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\data\\processed",
+      "scaler_directory": "C:\\Users\\bloss\\OneDrive\\바탕 화면\\취업\\프로젝트\\artifacts\\scaler"
+    }
+  },
+  "sensors": [
+    {
+      "name": "ground_voltage_a",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "ground_voltage_b",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "leakage_current",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 1.0,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "limiter_temp_a",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 60.0,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_b",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 60.0,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "limiter_temp_c",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 60.0,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 120,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "humidity",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 30.0,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 90,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "ambient_temp",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 30.0,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 90,
+      "enabled": true,
+      "group": "slow_context"
+    },
+    {
+      "name": "input_voltage",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 1.0,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 3,
+      "enabled": true,
+      "group": "fast"
+    },
+    {
+      "name": "lightning_sensor",
+      "unit": "synthetic_unit",
+      "expected_min": null,
+      "expected_max": null,
+      "nominal_sampling_period": 0.1,
+      "threshold": null,
+      "missing_value_policy": "limited_forward_fill",
+      "max_staleness": 0.3,
+      "enabled": true,
+      "group": "fast"
+    }
+  ],
+  "feature_order": [
+    "ground_voltage_a__current_value",
+    "ground_voltage_b__current_value",
+    "leakage_current__current_value",
+    "limiter_temp_a__current_value",
+    "limiter_temp_b__current_value",
+    "limiter_temp_c__current_value",
+    "humidity__current_value",
+    "ambient_temp__current_value",
+    "input_voltage__current_value",
+    "lightning_sensor__current_value",
+    "ground_voltage_a__missing",
+    "ground_voltage_b__missing",
+    "leakage_current__missing",
+    "limiter_temp_a__missing",
+    "limiter_temp_b__missing",
+    "limiter_temp_c__missing",
+    "humidity__missing",
+    "ambient_temp__missing",
+    "input_voltage__missing",
+    "lightning_sensor__missing"
+  ],
+  "split": {
+    "mode": "event",
+    "boundaries": [
+      "2026-01-01T00:03:00+00:00",
+      "2026-01-01T00:04:00+00:00"
+    ],
+    "purged_rows": 0,
+    "raw_rows": {
+      "train": 1800,
+      "validation": 600,
+      "test": 1200
+    },
+    "events": {
+      "train": [
+        "synthetic-0000",
+        "synthetic-0001",
+        "synthetic-0002"
+      ],
+      "validation": [
+        "synthetic-0003"
+      ],
+      "test": [
+        "synthetic-0004",
+        "synthetic-0005"
+      ]
+    }
+  },
+  "aligned_rows": {
+    "train": 1800,
+    "validation": 600,
+    "test": 1200
+  },
+  "windows": {
+    "train": 441,
+    "validation": 147,
+    "test": 294
+  },
+  "unlabeled_windows": {
+    "train": 441,
+    "validation": 147,
+    "test": 294
+  },
+  "supervised_training_ready": false,
+  "label_status": "UNLABELED",
+  "event_files": {
+    "train": {
+      "synthetic-0000": "events/train/28ba66b1a2aee607.parquet",
+      "synthetic-0001": "events/train/027405771be2c462.parquet",
+      "synthetic-0002": "events/train/71c66324bcdfbf6e.parquet"
+    },
+    "validation": {
+      "synthetic-0003": "events/validation/7cd5ff5470b4df38.parquet"
+    },
+    "test": {
+      "synthetic-0004": "events/test/de60006860fb1a94.parquet",
+      "synthetic-0005": "events/test/95d4c22dab7a2715.parquet"
+    }
+  },
+  "scaler_fit_split": "train",
+  "notes": [
+    "Post-event exports are offline verification data, not prediction inputs.",
+    "Missing features use medians fitted on valid train rows only; missing indicators are preserved.",
+    "No model is trained or physical detection performance claimed."
+  ]
+}

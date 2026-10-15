@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "run_id": "integrated-20261012",
+  "synthetic_demo": true,
+  "settings": {
+    "schema_version": 1,
+    "purpose": "SOFTWARE_INTEGRATION_NOT_PHYSICAL_PERFORMANCE",
+    "preprocessing_config": "preprocessing_integration_demo.yaml",
+    "model_base_config": "model_demo.yaml",
+    "model_overrides_config": "model_integration_demo.yaml",
+    "experiments": [
+      {
+        "name": "lstm16",
+        "hidden_units": 16,
+        "seed": 42
+      },
+      {
+        "name": "lstm32",
+        "hidden_units": 32,
+        "seed": 42
+      },
+      {
+        "name": "lstm64",
+        "hidden_units": 64,
+        "seed": 42
+      },
+      {
+        "name": "lstm16-seed43",
+        "hidden_units": 16,
+        "seed": 43
+      }
+    ],
+    "replay": {
+      "mode": "advisory",
+      "hardware_actuation_enabled": false,
+      "minimum_consecutive_detections": 2,
+      "off_threshold_ratio": 0.8,
+      "pre_event_seconds": 5,
+      "post_event_seconds": 2,
+      "writer_queue_capacity": 64,
+      "max_active_events": 4,
+      "max_event_seconds": 30,
+      "rules": [],
+      "rule_combination": "any"
+    },
+    "target_mcu_config": "target_mcu.yaml"
+  },
+  "stages": {
+    "scenarios": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\integration\\integrated-20261012",
+      "rows": 42000
+    },
+    "dataset": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\dataset"
+    },
+    "lstm16": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm16"
+    },
+    "lstm32": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm32"
+    },
+    "lstm64": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm64"
+    },
+    "lstm16-seed43": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm16-seed43"
+    },
+    "bundle": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\bundle-final"
+    },
+    "export": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\export-verified-4"
+    },
+    "resources": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\resources-verified-3",
+      "mcu_feasibility": "UNKNOWN"
+    },
+    "feature_ablation": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\models\\lstm16-fast-only",
+      "input_features": 15
+    },
+    "calibrated_replay": {
+      "status": "SUCCESS",
+      "model": "lstm",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\calibrated-3",
+      "decision_policy_split": "validation",
+      "summaries": {
+        "heldout": {
+          "schema_version": 1,
+          "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\calibrated-3\\inputs\\heldout.synthetic.csv",
+          "model": "lstm",
+          "speed": "max",
+          "synthetic_demo": true,
+          "observations": 7200,
+          "aligned_rows": 7200,
+          "model_version": "lstm16-fast-only",
+          "decision_thresholds": {
+            "on": 0.1741286814212799,
+            "off": 0.1741286814212799,
+            "consecutive": 2
+          },
+          "status_counts": {
+            "WARMING_UP": 756,
+            "READY": 1620,
+            "WAITING_FOR_STRIDE": 4824
+          },
+          "rejected_observations": [],
+          "rejected_observation_count": 0,
+          "buffer_capacity": 114,
+          "buffer_array_bytes": 7866,
+          "input_tensor_bytes": 3840,
+          "sequence_workspace_bytes": 576,
+          "elapsed_host_seconds": 12.016864299999725,
+          "inference_host_ms": {
+            "median": 3.54265,
+            "p95": 8.474285,
+            "sample_limit": 4096
+          },
+          "recorder": {
+            "saved_events": 8,
+            "dropped_events": 0,
+            "writer_errors": [],
+            "writer_error_count": 0,
+            "max_saved_events": 1000,
+            "queue_capacity": 64,
+            "history_capacity": 51
+          },
+          "evaluation": {
+            "scope": "timestamp_replay_not_mcu_or_physical_validation",
+            "window": {
+              "samples": 1620,
+              "confusion_matrix": [
+                [
+                  1437,
+                  18
+                ],
+                [
+                  1,
+                  164
+                ]
+              ],
+              "false_positives": 18,
+              "false_negatives": 1,
+              "precision": 0.9010989010989011,
+              "recall": 0.9939393939393939,
+              "f1": 0.9452449567723342,
+              "accuracy": 0.9882716049382716,
+              "risk_false_positive_rate": 0.012371134020618556,
+              "threshold": 0.1741286814212799,
+              "scope": "window_level"
+            },
+            "total_seconds": 720.0,
+            "normal_seconds": 654.7,
+            "normal_valid_seconds": 579.1,
+            "available_seconds": 644.4000000000001,
+            "coverage": 0.895,
+            "risk_intervals": 8,
+            "detected_risk_intervals": 8,
+            "missed_risk_intervals": 0,
+            "incompletely_covered_risk_intervals": 0,
+            "missed_fully_covered_risk_intervals": 0,
+            "alarm_episodes": 8,
+            "false_alarm_episodes": 0,
+            "unmatched_alarm_episodes": 0,
+            "false_alarm_per_normal_valid_hour": 0.0,
+            "normal_alarm_seconds": 7.5,
+            "normal_alarm_seconds_including_unavailable": 7.5,
+            "normal_alarm_fraction": 0.012951131065446382,
+            "detection_delays_seconds": [
+              0.4,
+              0.8,
+              0.5,
+              0.5,
+              0.4,
+              0.5,
+              0.5,
+              0.4
+            ],
+            "delay_sample_limit": 1024,
+            "median_detection_delay_seconds": 0.5,
+            "unclassified_rows": 0,
+            "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+          },
+          "mcu_verified": false,
+          "hardware_actuation_performed": false
+        },
+        "faults": {
+          "schema_version": 1,
+          "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\integration\\integrated-20261012\\faults.synthetic.csv",
+          "model": "lstm",
+          "speed": "max",
+          "synthetic_demo": true,
+          "observations": 6000,
+          "aligned_rows": 5998,
+          "model_version": "lstm16-fast-only",
+          "decision_thresholds": {
+            "on": 0.1741286814212799,
+            "off": 0.1741286814212799,
+            "consecutive": 2
+          },
+          "status_counts": {
+            "WARMING_UP": 630,
+            "READY": 1118,
+            "WAITING_FOR_STRIDE": 4020,
+            "INVALID_WINDOW": 230
+          },
+          "rejected_observations": [],
+          "rejected_observation_count": 0,
+          "buffer_capacity": 114,
+          "buffer_array_bytes": 7866,
+          "input_tensor_bytes": 3840,
+          "sequence_workspace_bytes": 576,
+          "elapsed_host_seconds": 8.351593300001696,
+          "inference_host_ms": {
+            "median": 3.40975,
+            "p95": 7.510779999999991,
+            "sample_limit": 4096
+          },
+          "recorder": {
+            "saved_events": 0,
+            "dropped_events": 0,
+            "writer_errors": [],
+            "writer_error_count": 0,
+            "max_saved_events": 1000,
+            "queue_capacity": 64,
+            "history_capacity": 51
+          },
+          "evaluation": {
+            "scope": "timestamp_replay_not_mcu_or_physical_validation",
+            "window": null,
+            "total_seconds": 599.8000000000001,
+            "normal_seconds": 0.0,
+            "normal_valid_seconds": 0.0,
+            "available_seconds": 442.20000000000005,
+            "coverage": 0.737245748582861,
+            "risk_intervals": 0,
+            "detected_risk_intervals": 0,
+            "missed_risk_intervals": 0,
+            "incompletely_covered_risk_intervals": 0,
+            "missed_fully_covered_risk_intervals": 0,
+            "alarm_episodes": 0,
+            "false_alarm_episodes": 0,
+            "unmatched_alarm_episodes": 0,
+            "false_alarm_per_normal_valid_hour": null,
+            "normal_alarm_seconds": 0.0,
+            "normal_alarm_seconds_including_unavailable": 0.0,
+            "normal_alarm_fraction": null,
+            "detection_delays_seconds": [],
+            "delay_sample_limit": 1024,
+            "median_detection_delay_seconds": null,
+            "unclassified_rows": 5998,
+            "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+          },
+          "mcu_verified": false,
+          "hardware_actuation_performed": false
+        },
+        "long-normal": {
+          "schema_version": 1,
+          "input": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\data\\raw\\integration\\integrated-20261012\\normal-hour.synthetic.csv",
+          "model": "lstm",
+          "speed": "max",
+          "synthetic_demo": true,
+          "observations": 72000,
+          "aligned_rows": 72000,
+          "model_version": "lstm16-fast-only",
+          "decision_thresholds": {
+            "on": 0.1741286814212799,
+            "off": 0.1741286814212799,
+            "consecutive": 2
+          },
+          "status_counts": {
+            "WARMING_UP": 63,
+            "READY": 17985,
+            "WAITING_FOR_STRIDE": 53952
+          },
+          "rejected_observations": [],
+          "rejected_observation_count": 0,
+          "buffer_capacity": 114,
+          "buffer_array_bytes": 7866,
+          "input_tensor_bytes": 3840,
+          "sequence_workspace_bytes": 576,
+          "elapsed_host_seconds": 106.39870009999868,
+          "inference_host_ms": {
+            "median": 2.5504499999999997,
+            "p95": 5.81735,
+            "sample_limit": 4096
+          },
+          "recorder": {
+            "saved_events": 0,
+            "dropped_events": 0,
+            "writer_errors": [],
+            "writer_error_count": 0,
+            "max_saved_events": 1000,
+            "queue_capacity": 64,
+            "history_capacity": 51
+          },
+          "evaluation": {
+            "scope": "timestamp_replay_not_mcu_or_physical_validation",
+            "window": {
+              "samples": 17985,
+              "confusion_matrix": [
+                [
+                  17985,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "accuracy": 1.0,
+              "risk_false_positive_rate": 0.0,
+              "threshold": 0.1741286814212799,
+              "scope": "window_level"
+            },
+            "total_seconds": 7200.0,
+            "normal_seconds": 7200.0,
+            "normal_valid_seconds": 7193.700000000001,
+            "available_seconds": 7193.700000000001,
+            "coverage": 0.999125,
+            "risk_intervals": 0,
+            "detected_risk_intervals": 0,
+            "missed_risk_intervals": 0,
+            "incompletely_covered_risk_intervals": 0,
+            "missed_fully_covered_risk_intervals": 0,
+            "alarm_episodes": 0,
+            "false_alarm_episodes": 0,
+            "unmatched_alarm_episodes": 0,
+            "false_alarm_per_normal_valid_hour": 0.0,
+            "normal_alarm_seconds": 0.0,
+            "normal_alarm_seconds_including_unavailable": 0.0,
+            "normal_alarm_fraction": 0.0,
+            "detection_delays_seconds": [],
+            "delay_sample_limit": 1024,
+            "median_detection_delay_seconds": null,
+            "unclassified_rows": 0,
+            "matching_rule": "False alarm = ENTER during available labeled-normal time. Risk detection = available alarm overlap. Unmatched episodes and normal alarm duration are separately reported."
+          },
+          "mcu_verified": false,
+          "hardware_actuation_performed": false
+        }
+      }
+    },
+    "final_audit": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\final-audit"
+    },
+    "tests": {
+      "status": "SUCCESS",
+      "passed": 165,
+      "warnings": 45,
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\tests-final.xml"
+    },
+    "report": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\docs\\integration-results-20261012.md"
+    },
+    "presentation": {
+      "status": "SUCCESS",
+      "path": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\output\\presentations\\\uadf8\ub77c\uc6b4\ub4dc_\uc2e4\uc2dc\uac04_\ud1b5\ud569\uac1c\ubc1c_\ubc29\uacbd\uc2dd.pptx",
+      "script": "C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\output\\presentations\\\uadf8\ub77c\uc6b4\ub4dc_\uc2e4\uc2dc\uac04_\ud1b5\ud569\uac1c\ubc1c_\ubc1c\ud45c\ub300\ubcf8_\ubc29\uacbd\uc2dd.md"
+    }
+  },
+  "status": "PC_COMPLETE_HARDWARE_PENDING",
+  "recovery_history": [
+    "FailedPreconditionError: C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\export is not a directory",
+    "FailedPreconditionError: C:\\Users\\bloss\\OneDrive\\\ubc14\ud0d5 \ud654\uba74\\\ucde8\uc5c5\\\ud504\ub85c\uc81d\ud2b8\\artifacts\\integrated-20261012\\export is not a directory"
+  ]
+}

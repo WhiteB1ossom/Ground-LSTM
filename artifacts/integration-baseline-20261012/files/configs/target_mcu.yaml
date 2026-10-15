@@ -1,0 +1,7 @@
+schema_version: 1
+flash_kb: null
+ram_kb: null
+cpu_mhz: null
+architecture: null
+tensor_arena_bytes: null
+deployment_feasibility: unknown

@@ -1,0 +1,254 @@
+[
+  {
+    "sensor": "ground_voltage_a",
+    "value": 1.98,
+    "unit": "V_AC",
+    "boundary_position": -1,
+    "review_condition_met": false,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9998103976249695,
+      "surge": 9.248426067642868e-05
+    }
+  },
+  {
+    "sensor": "ground_voltage_a",
+    "value": 2.0,
+    "unit": "V_AC",
+    "boundary_position": 0,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9998103380203247,
+      "surge": 9.248593414667994e-05
+    }
+  },
+  {
+    "sensor": "ground_voltage_a",
+    "value": 2.02,
+    "unit": "V_AC",
+    "boundary_position": 1,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9998102784156799,
+      "surge": 9.248849528376013e-05
+    }
+  },
+  {
+    "sensor": "ground_voltage_b",
+    "value": 1.98,
+    "unit": "V_AC",
+    "boundary_position": -1,
+    "review_condition_met": false,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9998209476470947,
+      "surge": 0.00011120680574094877
+    }
+  },
+  {
+    "sensor": "ground_voltage_b",
+    "value": 2.0,
+    "unit": "V_AC",
+    "boundary_position": 0,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9998210072517395,
+      "surge": 0.00011149796773679554
+    }
+  },
+  {
+    "sensor": "ground_voltage_b",
+    "value": 2.02,
+    "unit": "V_AC",
+    "boundary_position": 1,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.999821126461029,
+      "surge": 0.00011179104330949485
+    }
+  },
+  {
+    "sensor": "leakage_current",
+    "value": 0.00198,
+    "unit": "A",
+    "boundary_position": -1,
+    "review_condition_met": false,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9997954964637756,
+      "surge": 0.00010120045044459403
+    }
+  },
+  {
+    "sensor": "leakage_current",
+    "value": 0.002,
+    "unit": "A",
+    "boundary_position": 0,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9997955560684204,
+      "surge": 0.0001015279267448932
+    }
+  },
+  {
+    "sensor": "leakage_current",
+    "value": 0.00202,
+    "unit": "A",
+    "boundary_position": 1,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9997955560684204,
+      "surge": 0.00010185772407567129
+    }
+  },
+  {
+    "sensor": "limiter_temp_a",
+    "value": 44.55,
+    "unit": "degC",
+    "boundary_position": -1,
+    "review_condition_met": false,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9998012781143188,
+      "surge": 7.974325126269832e-05
+    }
+  },
+  {
+    "sensor": "limiter_temp_a",
+    "value": 45.0,
+    "unit": "degC",
+    "boundary_position": 0,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9998005628585815,
+      "surge": 7.941677904454991e-05
+    }
+  },
+  {
+    "sensor": "limiter_temp_a",
+    "value": 45.45,
+    "unit": "degC",
+    "boundary_position": 1,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9997997879981995,
+      "surge": 7.909640407888219e-05
+    }
+  },
+  {
+    "sensor": "limiter_temp_b",
+    "value": 44.55,
+    "unit": "degC",
+    "boundary_position": -1,
+    "review_condition_met": false,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9996392130851746,
+      "surge": 0.00010391740215709433
+    }
+  },
+  {
+    "sensor": "limiter_temp_b",
+    "value": 45.0,
+    "unit": "degC",
+    "boundary_position": 0,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9996378421783447,
+      "surge": 0.00010438946628710255
+    }
+  },
+  {
+    "sensor": "limiter_temp_b",
+    "value": 45.45,
+    "unit": "degC",
+    "boundary_position": 1,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9996362924575806,
+      "surge": 0.00010487426334293559
+    }
+  },
+  {
+    "sensor": "limiter_temp_c",
+    "value": 44.55,
+    "unit": "degC",
+    "boundary_position": -1,
+    "review_condition_met": false,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9996058344841003,
+      "surge": 9.967440564651042e-05
+    }
+  },
+  {
+    "sensor": "limiter_temp_c",
+    "value": 45.0,
+    "unit": "degC",
+    "boundary_position": 0,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9995826482772827,
+      "surge": 0.00010029863187810406
+    }
+  },
+  {
+    "sensor": "limiter_temp_c",
+    "value": 45.45,
+    "unit": "degC",
+    "boundary_position": 1,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9995585680007935,
+      "surge": 0.00010098567872773856
+    }
+  },
+  {
+    "sensor": "humidity",
+    "value": 69.3,
+    "unit": "percent_RH",
+    "boundary_position": -1,
+    "review_condition_met": false,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9997954964637756,
+      "surge": 9.569091344019398e-05
+    }
+  },
+  {
+    "sensor": "humidity",
+    "value": 70.0,
+    "unit": "percent_RH",
+    "boundary_position": 0,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9997941255569458,
+      "surge": 9.581637277733535e-05
+    }
+  },
+  {
+    "sensor": "humidity",
+    "value": 70.7,
+    "unit": "percent_RH",
+    "boundary_position": 1,
+    "review_condition_met": true,
+    "ground_truth": "UNLABELED",
+    "model_scores": {
+      "degradation": 0.9997926354408264,
+      "surge": 9.594758012099192e-05
+    }
+  }
+]

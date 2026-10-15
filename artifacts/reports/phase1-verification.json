@@ -1,0 +1,74 @@
+{
+  "phase": 1,
+  "date": "2026-10-03",
+  "python": "3.14.3",
+  "platform": "Windows",
+  "packages": {
+    "pandas": "3.0.6",
+    "PyYAML": "6.0.3",
+    "pyarrow": "25.0.1",
+    "pytest": "9.1.1"
+  },
+  "pytest": {
+    "passed": 50,
+    "failed": 0,
+    "command": ".venv/Scripts/python -m pytest -q"
+  },
+  "compileall": "passed",
+  "pip_check": "passed",
+  "cli_fault_exit": 1,
+  "datasets": [
+    {
+      "report": "demo.synthetic.7a78b2cfaf35.quality.json",
+      "rows": 1801,
+      "source": "monitoring",
+      "synthetic": true,
+      "label_status": "UNLABELED",
+      "has_invalid_data": false,
+      "reason_counts": {
+        "MISSING_VALUE": 12219
+      }
+    },
+    {
+      "report": "faults.synthetic.a29d0bc301c0.quality.json",
+      "rows": 1801,
+      "source": "monitoring",
+      "synthetic": true,
+      "label_status": "UNLABELED",
+      "has_invalid_data": true,
+      "reason_counts": {
+        "TIMESTAMP_PARSE_FAILED": 1,
+        "TIMESTAMP_DUPLICATE": 2,
+        "TIMESTAMP_REVERSED": 1,
+        "NAN_VALUE": 1,
+        "INF_VALUE": 1,
+        "NON_NUMERIC_VALUE": 1,
+        "MISSING_VALUE": 12220,
+        "SAMPLING_INTERVAL_DEVIATION": 7,
+        "COMMUNICATION_ERROR": 1,
+        "SENSOR_STATUS_ABNORMAL": 1
+      }
+    },
+    {
+      "report": "sample.synthetic.f466f0f72edb.quality.json",
+      "rows": 1801,
+      "source": "monitoring",
+      "synthetic": true,
+      "label_status": "UNLABELED",
+      "has_invalid_data": false,
+      "reason_counts": {
+        "MISSING_VALUE": 12219
+      }
+    }
+  ],
+  "not_implemented": [
+    "alignment",
+    "scaling",
+    "event split",
+    "windows",
+    "training",
+    "TFLite",
+    "MCU inference",
+    "replay"
+  ]
+}

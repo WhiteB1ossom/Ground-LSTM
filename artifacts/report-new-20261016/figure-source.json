@@ -1,0 +1,10 @@
+{
+  "source": "artifacts\\presentation-demo\\20261016-002908-974509-2f5786\\timeline.jsonl",
+  "scenario": "both",
+  "actual_lstm": true,
+  "synthetic_demo": true,
+  "inferences_per_task": {
+    "degradation": 174,
+    "surge": 174
+  }
+}

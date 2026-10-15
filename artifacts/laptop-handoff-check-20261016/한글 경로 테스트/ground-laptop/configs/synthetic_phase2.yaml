@@ -1,0 +1,13 @@
+schema_version: 1
+purpose: SOFTWARE_PIPELINE_TEST_ONLY_NOT_PHYSICAL_LIGHTNING_DATA
+seed: 42
+start_timestamp: "2026-01-01T00:00:00Z"
+duration_seconds: 359.9
+base_period_seconds: 0.1
+cycle_seconds: 60
+approaching_fraction: 0.4
+event_fraction: 0.6
+recovery_fraction: 0.7
+test_period_seconds:
+  humidity: 30
+  ambient_temp: 30

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "deployment_target": "server",
+  "synthetic_demo": true,
+  "criteria_provenance": {
+    "values": "user_2026_10_15_replaces_earlier_1mA_25degC_60percent",
+    "comparison_operator": "engineering_ge_review_default_user_delegated_not_company_certified",
+    "temperature_reference": "absolute_degC_review_default",
+    "ambient_25degC": "context_reference_not_automatic_degradation_or_lightning_label",
+    "input_voltage": "measured_input_and_configured_reference_difference_no_universal_alarm_limit",
+    "surge_counter": "lightning_or_overvoltage_counts_not_confirmed_lightning_occurrences",
+    "references": [
+      "https://eca3g.com/home/sub.php?menukey=487",
+      "https://eca3g.com/home/main.php",
+      "https://eca3g.com/home/images/sub/ground_catalogue.pdf"
+    ]
+  },
+  "tasks": {
+    "degradation": {
+      "bundle": "degradation/bundle",
+      "replay_config": "degradation/replay-selected.yaml",
+      "meaning": "equipment_review_not_confirmed_failure"
+    },
+    "surge": {
+      "bundle": "surge/bundle",
+      "replay_config": "surge/replay-selected.yaml",
+      "meaning": "surge_activity_not_lightning_confirmation"
+    }
+  }
+}

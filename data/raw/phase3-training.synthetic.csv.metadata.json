@@ -1,0 +1,35 @@
+{
+  "purpose": "SOFTWARE_PIPELINE_TEST_ONLY_NOT_PHYSICAL_LIGHTNING_DATA",
+  "is_synthetic": true,
+  "labels": "SOFTWARE_FIXTURE_LABELS_ONLY",
+  "warning": "Arbitrary units and demonstration states. Not suitable for evaluating real detection performance.",
+  "source": "monitoring",
+  "sha256": "3d1a58b5af2b622d0e00489a70e01da7be870aa1a01d55698d7bd85abe9d9c6e",
+  "generator_settings": {
+    "schema_version": 1,
+    "purpose": "SOFTWARE_PIPELINE_TEST_ONLY_NOT_PHYSICAL_LIGHTNING_DATA",
+    "seed": 42,
+    "start_timestamp": "2026-01-01T00:00:00Z",
+    "duration_seconds": 359.9,
+    "base_period_seconds": 0.1,
+    "cycle_seconds": 60,
+    "approaching_fraction": 0.4,
+    "event_fraction": 0.6,
+    "recovery_fraction": 0.7,
+    "test_period_seconds": {
+      "humidity": 30,
+      "ambient_temp": 30
+    }
+  },
+  "faults_injected": false,
+  "labeling_fixture": {
+    "schema_version": 1,
+    "purpose": "SOFTWARE_TRAINING_TEST_ONLY_NOT_PHYSICAL_PERFORMANCE",
+    "synthetic_state_mapping": {
+      "normal": "normal",
+      "approaching_risk": "risk",
+      "lightning_event": "risk",
+      "recovery": "normal"
+    }
+  }
+}

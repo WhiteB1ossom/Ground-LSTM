@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "synthetic_demo": true,
+  "session_id": "equipment-0083",
+  "scenario": "heating_without_surge",
+  "observations": 1800,
+  "inferences": {
+    "degradation": 174,
+    "surge": 174
+  },
+  "timeline": {
+    "segment_bytes": 33554432,
+    "max_segments": 8,
+    "maximum_retained_bytes": 268435456,
+    "files": [
+      "timeline.jsonl"
+    ],
+    "retained_records": 1800,
+    "retained_payload_bytes": 17300148,
+    "written_records": 1800,
+    "evicted_records": 0,
+    "dropped_records": 0,
+    "retention_truncated": false,
+    "error_count": 0,
+    "errors": [],
+    "disabled": false
+  },
+  "processing_failure_count": 0,
+  "physical_validation": false,
+  "hardware_actuation_performed": false
+}
